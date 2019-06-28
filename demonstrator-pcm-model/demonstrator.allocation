@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ASCII"?>
+<allocation:Allocation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:allocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2" id="_yoVyMJl0EemrFZ3y2Npp_A" entityName="New Allocation">
+  <targetResourceEnvironment_Allocation href="demonstrator.resourceenvironment#/"/>
+  <system_Allocation href="demonstrator.system#_ynfWgJjYEemTrvLgMAvOgQ"/>
+  <allocationContexts_Allocation id="_6Ki_YJl0EemrFZ3y2Npp_A" entityName="Allocation_Dispenser">
+    <resourceContainer_AllocationContext href="demonstrator.resourceenvironment#_lSekUJl0EemrFZ3y2Npp_A"/>
+    <assemblyContext_AllocationContext href="demonstrator.system#_Mc4iAJjrEemsLZwzUnOTIQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_9EYTQJl0EemrFZ3y2Npp_A" entityName="Allocation_Gate">
+    <resourceContainer_AllocationContext href="demonstrator.resourceenvironment#_lSekUJl0EemrFZ3y2Npp_A"/>
+    <assemblyContext_AllocationContext href="demonstrator.system#_TJOjYJjZEemiAstdxdR3IQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_7LthcJl0EemrFZ3y2Npp_A" entityName="Allocation_Assembly_NotificationComponent">
+    <resourceContainer_AllocationContext href="demonstrator.resourceenvironment#_o4vgYJl0EemrFZ3y2Npp_A"/>
+    <assemblyContext_AllocationContext href="demonstrator.system#_JP6aQJjsEemsLZwzUnOTIQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_AieKwJl1EemrFZ3y2Npp_A" entityName="Allocation_FactoryOne">
+    <resourceContainer_AllocationContext href="demonstrator.resourceenvironment#_lSekUJl0EemrFZ3y2Npp_A"/>
+    <assemblyContext_AllocationContext href="demonstrator.system#_TW9YMJjrEemsLZwzUnOTIQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_Az88UJl1EemrFZ3y2Npp_A" entityName="Allocation_FactorTwo">
+    <resourceContainer_AllocationContext href="demonstrator.resourceenvironment#_lSekUJl0EemrFZ3y2Npp_A"/>
+    <assemblyContext_AllocationContext href="demonstrator.system#_XA0a0JjrEemsLZwzUnOTIQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_BFpwUJl1EemrFZ3y2Npp_A" entityName="Allocation_ForemanSystem01">
+    <resourceContainer_AllocationContext href="demonstrator.resourceenvironment#_rxCjMJl0EemrFZ3y2Npp_A"/>
+    <assemblyContext_AllocationContext href="demonstrator.system#_-orV0JjrEemsLZwzUnOTIQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_CPJH8Jl1EemrFZ3y2Npp_A" entityName="Allocation_Assembly_HRComponent">
+    <resourceContainer_AllocationContext href="demonstrator.resourceenvironment#_o4vgYJl0EemrFZ3y2Npp_A"/>
+    <assemblyContext_AllocationContext href="demonstrator.system#_bHt9UJlwEemrFZ3y2Npp_A"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_CxfnEJl1EemrFZ3y2Npp_A" entityName="Allocation_FactoryThree">
+    <resourceContainer_AllocationContext href="demonstrator.resourceenvironment#_lSekUJl0EemrFZ3y2Npp_A"/>
+    <assemblyContext_AllocationContext href="demonstrator.system#_ZXD5cJjrEemsLZwzUnOTIQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_D91eYJl1EemrFZ3y2Npp_A" entityName="Allocation_Assembly_LocationProvider">
+    <resourceContainer_AllocationContext href="demonstrator.resourceenvironment#_o4vgYJl0EemrFZ3y2Npp_A"/>
+    <assemblyContext_AllocationContext href="demonstrator.system#_KqlogJjsEemsLZwzUnOTIQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_ETm6EJl1EemrFZ3y2Npp_A" entityName="Allocation_ForemanSystem03">
+    <resourceContainer_AllocationContext href="demonstrator.resourceenvironment#_rxCjMJl0EemrFZ3y2Npp_A"/>
+    <assemblyContext_AllocationContext href="demonstrator.system#_BzWiEJjsEemsLZwzUnOTIQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_EnkX4Jl1EemrFZ3y2Npp_A" entityName="Allocation_ForemanSystem02">
+    <resourceContainer_AllocationContext href="demonstrator.resourceenvironment#_rxCjMJl0EemrFZ3y2Npp_A"/>
+    <assemblyContext_AllocationContext href="demonstrator.system#_Dh02EJjsEemsLZwzUnOTIQ"/>
+  </allocationContexts_Allocation>
+</allocation:Allocation>

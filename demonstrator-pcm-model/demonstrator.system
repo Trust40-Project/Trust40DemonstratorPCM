@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="ASCII"?>
-<system:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:system="http://palladiosimulator.org/PalladioComponentModel/System/5.2" id="_ynfWgJjYEemTrvLgMAvOgQ" entityName="New System">
+<system:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:system="http://palladiosimulator.org/PalladioComponentModel/System/5.2" id="_ynfWgJjYEemTrvLgMAvOgQ" entityName="FactorySystem">
   <assemblyContexts__ComposedStructure id="_TJOjYJjZEemiAstdxdR3IQ" entityName="Gate">
     <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="demonstrator.repository#__2MGEJjQEemX1MO8tejE0Q"/>
   </assemblyContexts__ComposedStructure>
   <assemblyContexts__ComposedStructure id="_Mc4iAJjrEemsLZwzUnOTIQ" entityName="Dispenser">
     <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="demonstrator.repository#__2MGEJjQEemX1MO8tejE0Q"/>
   </assemblyContexts__ComposedStructure>
-  <assemblyContexts__ComposedStructure id="_TW9YMJjrEemsLZwzUnOTIQ" entityName="FactoryOne">
+  <assemblyContexts__ComposedStructure id="_TW9YMJjrEemsLZwzUnOTIQ" entityName="GateFactoryOne">
     <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="demonstrator.repository#__2MGEJjQEemX1MO8tejE0Q"/>
   </assemblyContexts__ComposedStructure>
-  <assemblyContexts__ComposedStructure id="_XA0a0JjrEemsLZwzUnOTIQ" entityName="FactorTwo">
+  <assemblyContexts__ComposedStructure id="_XA0a0JjrEemsLZwzUnOTIQ" entityName="GateFactoryTwo">
     <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="demonstrator.repository#__2MGEJjQEemX1MO8tejE0Q"/>
   </assemblyContexts__ComposedStructure>
-  <assemblyContexts__ComposedStructure id="_ZXD5cJjrEemsLZwzUnOTIQ" entityName="FactoryThree">
+  <assemblyContexts__ComposedStructure id="_ZXD5cJjrEemsLZwzUnOTIQ" entityName="GateFactoryThree">
     <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="demonstrator.repository#__2MGEJjQEemX1MO8tejE0Q"/>
   </assemblyContexts__ComposedStructure>
   <assemblyContexts__ComposedStructure id="_-orV0JjrEemsLZwzUnOTIQ" entityName="ForemanSystem01">
@@ -30,34 +30,116 @@
   <assemblyContexts__ComposedStructure id="_KqlogJjsEemsLZwzUnOTIQ" entityName="Assembly_LocationProvider">
     <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="demonstrator.repository#_AnJo8JjREemX1MO8tejE0Q"/>
   </assemblyContexts__ComposedStructure>
-  <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_un29kJjrEemsLZwzUnOTIQ" entityName="newRequiredDelegationConnector" outerRequiredRole_RequiredDelegationConnector="_jw5bEJjrEemsLZwzUnOTIQ" assemblyContext_RequiredDelegationConnector="_TJOjYJjZEemiAstdxdR3IQ">
-    <innerRequiredRole_RequiredDelegationConnector href="demonstrator.repository#_AMFLoJjTEemTrvLgMAvOgQ"/>
+  <assemblyContexts__ComposedStructure id="_bHt9UJlwEemrFZ3y2Npp_A" entityName="Assembly_HRComponent">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="demonstrator.repository#_UotOkJjYEemTrvLgMAvOgQ"/>
+  </assemblyContexts__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_un29kJjrEemsLZwzUnOTIQ" entityName="newRequiredDelegationConnector" assemblyContext_RequiredDelegationConnector="_TJOjYJjZEemiAstdxdR3IQ"/>
+  <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_wO0UUJjrEemsLZwzUnOTIQ" entityName="newRequiredDelegationConnector" assemblyContext_RequiredDelegationConnector="_Mc4iAJjrEemsLZwzUnOTIQ"/>
+  <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_BzAKEJlrEemrFZ3y2Npp_A" entityName="newRequiredDelegationConnector" assemblyContext_RequiredDelegationConnector="_XA0a0JjrEemsLZwzUnOTIQ"/>
+  <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_JyizgJlrEemrFZ3y2Npp_A" entityName="newRequiredDelegationConnector" assemblyContext_RequiredDelegationConnector="_ZXD5cJjrEemsLZwzUnOTIQ"/>
+  <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_KOHVMJlrEemrFZ3y2Npp_A" entityName="newRequiredDelegationConnector" assemblyContext_RequiredDelegationConnector="_TW9YMJjrEemsLZwzUnOTIQ"/>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_UXj4IJlwEemrFZ3y2Npp_A" entityName="newAssemblyConnector" requiringAssemblyContext_AssemblyConnector="_Dh02EJjsEemsLZwzUnOTIQ" providingAssemblyContext_AssemblyConnector="_KqlogJjsEemsLZwzUnOTIQ">
+    <providedRole_AssemblyConnector href="demonstrator.repository#_o5VzAJjUEemTrvLgMAvOgQ"/>
+    <requiredRole_AssemblyConnector href="demonstrator.repository#_mj3zoJjYEemTrvLgMAvOgQ"/>
   </connectors__ComposedStructure>
-  <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_wO0UUJjrEemsLZwzUnOTIQ" entityName="newRequiredDelegationConnector" outerRequiredRole_RequiredDelegationConnector="_ojXEgJjrEemsLZwzUnOTIQ" assemblyContext_RequiredDelegationConnector="_Mc4iAJjrEemsLZwzUnOTIQ">
-    <innerRequiredRole_RequiredDelegationConnector href="demonstrator.repository#_AMFLoJjTEemTrvLgMAvOgQ"/>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_VSUQMJlwEemrFZ3y2Npp_A" entityName="newAssemblyConnector" requiringAssemblyContext_AssemblyConnector="_BzWiEJjsEemsLZwzUnOTIQ" providingAssemblyContext_AssemblyConnector="_KqlogJjsEemsLZwzUnOTIQ">
+    <providedRole_AssemblyConnector href="demonstrator.repository#_o5VzAJjUEemTrvLgMAvOgQ"/>
+    <requiredRole_AssemblyConnector href="demonstrator.repository#_mj3zoJjYEemTrvLgMAvOgQ"/>
   </connectors__ComposedStructure>
-  <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_64EK8JjrEemsLZwzUnOTIQ" entityName="newRequiredDelegationConnector" outerRequiredRole_RequiredDelegationConnector="_rPvyQJjrEemsLZwzUnOTIQ" assemblyContext_RequiredDelegationConnector="_TW9YMJjrEemsLZwzUnOTIQ">
-    <innerRequiredRole_RequiredDelegationConnector href="demonstrator.repository#_AMFLoJjTEemTrvLgMAvOgQ"/>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_WEcQsJlwEemrFZ3y2Npp_A" entityName="newAssemblyConnector" requiringAssemblyContext_AssemblyConnector="_-orV0JjrEemsLZwzUnOTIQ" providingAssemblyContext_AssemblyConnector="_KqlogJjsEemsLZwzUnOTIQ">
+    <providedRole_AssemblyConnector href="demonstrator.repository#_o5VzAJjUEemTrvLgMAvOgQ"/>
+    <requiredRole_AssemblyConnector href="demonstrator.repository#_mj3zoJjYEemTrvLgMAvOgQ"/>
   </connectors__ComposedStructure>
-  <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_7TrI4JjrEemsLZwzUnOTIQ" entityName="newRequiredDelegationConnector" outerRequiredRole_RequiredDelegationConnector="_rPvyQJjrEemsLZwzUnOTIQ" assemblyContext_RequiredDelegationConnector="_XA0a0JjrEemsLZwzUnOTIQ">
-    <innerRequiredRole_RequiredDelegationConnector href="demonstrator.repository#_AMFLoJjTEemTrvLgMAvOgQ"/>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_XdNacJlwEemrFZ3y2Npp_A" entityName="newAssemblyConnector" requiringAssemblyContext_AssemblyConnector="_-orV0JjrEemsLZwzUnOTIQ" providingAssemblyContext_AssemblyConnector="_JP6aQJjsEemsLZwzUnOTIQ">
+    <providedRole_AssemblyConnector href="demonstrator.repository#_MDJuAJjYEemTrvLgMAvOgQ"/>
+    <requiredRole_AssemblyConnector href="demonstrator.repository#_o-QLYJjYEemTrvLgMAvOgQ"/>
   </connectors__ComposedStructure>
-  <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_7t7b8JjrEemsLZwzUnOTIQ" entityName="newRequiredDelegationConnector" outerRequiredRole_RequiredDelegationConnector="_rPvyQJjrEemsLZwzUnOTIQ" assemblyContext_RequiredDelegationConnector="_ZXD5cJjrEemsLZwzUnOTIQ">
-    <innerRequiredRole_RequiredDelegationConnector href="demonstrator.repository#_AMFLoJjTEemTrvLgMAvOgQ"/>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_YST2cJlwEemrFZ3y2Npp_A" entityName="newAssemblyConnector" requiringAssemblyContext_AssemblyConnector="_BzWiEJjsEemsLZwzUnOTIQ" providingAssemblyContext_AssemblyConnector="_JP6aQJjsEemsLZwzUnOTIQ">
+    <providedRole_AssemblyConnector href="demonstrator.repository#_MDJuAJjYEemTrvLgMAvOgQ"/>
+    <requiredRole_AssemblyConnector href="demonstrator.repository#_o-QLYJjYEemTrvLgMAvOgQ"/>
   </connectors__ComposedStructure>
-  <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_jw5bEJjrEemsLZwzUnOTIQ" entityName="AccessGate">
-    <requiredInterface__OperationRequiredRole href="demonstrator.repository#_Bur4wJjREemX1MO8tejE0Q"/>
-  </requiredRoles_InterfaceRequiringEntity>
-  <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_ojXEgJjrEemsLZwzUnOTIQ" entityName="AccessDispenser">
-    <requiredInterface__OperationRequiredRole href="demonstrator.repository#_Bur4wJjREemX1MO8tejE0Q"/>
-  </requiredRoles_InterfaceRequiringEntity>
-  <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_rPvyQJjrEemsLZwzUnOTIQ" entityName="AccessFactoryOne">
-    <requiredInterface__OperationRequiredRole href="demonstrator.repository#_Bur4wJjREemX1MO8tejE0Q"/>
-  </requiredRoles_InterfaceRequiringEntity>
-  <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_rPvyQJjrEemsLZwzUnOTIQ" entityName="AccessFactoryThree">
-    <requiredInterface__OperationRequiredRole href="demonstrator.repository#_Bur4wJjREemX1MO8tejE0Q"/>
-  </requiredRoles_InterfaceRequiringEntity>
-  <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_rPvyQJjrEemsLZwzUnOTIQ" entityName="AccessFactoryTwo">
-    <requiredInterface__OperationRequiredRole href="demonstrator.repository#_Bur4wJjREemX1MO8tejE0Q"/>
-  </requiredRoles_InterfaceRequiringEntity>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_Y_BLcJlwEemrFZ3y2Npp_A" entityName="newAssemblyConnector" requiringAssemblyContext_AssemblyConnector="_Dh02EJjsEemsLZwzUnOTIQ" providingAssemblyContext_AssemblyConnector="_JP6aQJjsEemsLZwzUnOTIQ">
+    <providedRole_AssemblyConnector href="demonstrator.repository#_MDJuAJjYEemTrvLgMAvOgQ"/>
+    <requiredRole_AssemblyConnector href="demonstrator.repository#_o-QLYJjYEemTrvLgMAvOgQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_frFa0JlwEemrFZ3y2Npp_A" entityName="newAssemblyConnector" requiringAssemblyContext_AssemblyConnector="_Dh02EJjsEemsLZwzUnOTIQ" providingAssemblyContext_AssemblyConnector="_bHt9UJlwEemrFZ3y2Npp_A">
+    <providedRole_AssemblyConnector href="demonstrator.repository#_ry4PIJjYEemTrvLgMAvOgQ"/>
+    <requiredRole_AssemblyConnector href="demonstrator.repository#_thuWkJjYEemTrvLgMAvOgQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_g3WZoJlwEemrFZ3y2Npp_A" entityName="newAssemblyConnector" requiringAssemblyContext_AssemblyConnector="_BzWiEJjsEemsLZwzUnOTIQ" providingAssemblyContext_AssemblyConnector="_bHt9UJlwEemrFZ3y2Npp_A">
+    <providedRole_AssemblyConnector href="demonstrator.repository#_ry4PIJjYEemTrvLgMAvOgQ"/>
+    <requiredRole_AssemblyConnector href="demonstrator.repository#_thuWkJjYEemTrvLgMAvOgQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_iZjMMJlwEemrFZ3y2Npp_A" entityName="newAssemblyConnector" requiringAssemblyContext_AssemblyConnector="_-orV0JjrEemsLZwzUnOTIQ" providingAssemblyContext_AssemblyConnector="_bHt9UJlwEemrFZ3y2Npp_A">
+    <providedRole_AssemblyConnector href="demonstrator.repository#_ry4PIJjYEemTrvLgMAvOgQ"/>
+    <requiredRole_AssemblyConnector href="demonstrator.repository#_thuWkJjYEemTrvLgMAvOgQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_JW6YsJlxEemrFZ3y2Npp_A" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_sBJYkJlwEemrFZ3y2Npp_A" assemblyContext_ProvidedDelegationConnector="_-orV0JjrEemsLZwzUnOTIQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="demonstrator.repository#_ZsyzgJjYEemTrvLgMAvOgQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_K0PSUJlxEemrFZ3y2Npp_A" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_vX4q4JlwEemrFZ3y2Npp_A" assemblyContext_ProvidedDelegationConnector="_BzWiEJjsEemsLZwzUnOTIQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="demonstrator.repository#_ZsyzgJjYEemTrvLgMAvOgQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_NAuYAJlxEemrFZ3y2Npp_A" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_yL31cJlwEemrFZ3y2Npp_A" assemblyContext_ProvidedDelegationConnector="_Dh02EJjsEemsLZwzUnOTIQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="demonstrator.repository#_ZsyzgJjYEemTrvLgMAvOgQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_Y5QPwJlyEemrFZ3y2Npp_A" entityName="newAssemblyConnector" requiringAssemblyContext_AssemblyConnector="_TJOjYJjZEemiAstdxdR3IQ" providingAssemblyContext_AssemblyConnector="_bHt9UJlwEemrFZ3y2Npp_A">
+    <providedRole_AssemblyConnector href="demonstrator.repository#_ry4PIJjYEemTrvLgMAvOgQ"/>
+    <requiredRole_AssemblyConnector href="demonstrator.repository#_IdF_UJlyEemrFZ3y2Npp_A"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_ZwZ6MJlyEemrFZ3y2Npp_A" entityName="newAssemblyConnector" requiringAssemblyContext_AssemblyConnector="_Mc4iAJjrEemsLZwzUnOTIQ" providingAssemblyContext_AssemblyConnector="_bHt9UJlwEemrFZ3y2Npp_A">
+    <providedRole_AssemblyConnector href="demonstrator.repository#_ry4PIJjYEemTrvLgMAvOgQ"/>
+    <requiredRole_AssemblyConnector href="demonstrator.repository#_IdF_UJlyEemrFZ3y2Npp_A"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_aunO4JlyEemrFZ3y2Npp_A" entityName="newAssemblyConnector" requiringAssemblyContext_AssemblyConnector="_TW9YMJjrEemsLZwzUnOTIQ" providingAssemblyContext_AssemblyConnector="_bHt9UJlwEemrFZ3y2Npp_A">
+    <providedRole_AssemblyConnector href="demonstrator.repository#_ry4PIJjYEemTrvLgMAvOgQ"/>
+    <requiredRole_AssemblyConnector href="demonstrator.repository#_IdF_UJlyEemrFZ3y2Npp_A"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_bjUpUJlyEemrFZ3y2Npp_A" entityName="newAssemblyConnector" requiringAssemblyContext_AssemblyConnector="_XA0a0JjrEemsLZwzUnOTIQ" providingAssemblyContext_AssemblyConnector="_bHt9UJlwEemrFZ3y2Npp_A">
+    <providedRole_AssemblyConnector href="demonstrator.repository#_ry4PIJjYEemTrvLgMAvOgQ"/>
+    <requiredRole_AssemblyConnector href="demonstrator.repository#_IdF_UJlyEemrFZ3y2Npp_A"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_cUb9MJlyEemrFZ3y2Npp_A" entityName="newAssemblyConnector" requiringAssemblyContext_AssemblyConnector="_ZXD5cJjrEemsLZwzUnOTIQ" providingAssemblyContext_AssemblyConnector="_bHt9UJlwEemrFZ3y2Npp_A">
+    <providedRole_AssemblyConnector href="demonstrator.repository#_ry4PIJjYEemTrvLgMAvOgQ"/>
+    <requiredRole_AssemblyConnector href="demonstrator.repository#_IdF_UJlyEemrFZ3y2Npp_A"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_hsrNMJlyEemrFZ3y2Npp_A" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_eQh2cJlyEemrFZ3y2Npp_A" assemblyContext_ProvidedDelegationConnector="_TJOjYJjZEemiAstdxdR3IQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="demonstrator.repository#_r4hyoJlxEemrFZ3y2Npp_A"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_kxozAJlyEemrFZ3y2Npp_A" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_iKw3YJlyEemrFZ3y2Npp_A" assemblyContext_ProvidedDelegationConnector="_Mc4iAJjrEemsLZwzUnOTIQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="demonstrator.repository#_r4hyoJlxEemrFZ3y2Npp_A"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_mx6BoJlyEemrFZ3y2Npp_A" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_lRqW4JlyEemrFZ3y2Npp_A" assemblyContext_ProvidedDelegationConnector="_TW9YMJjrEemsLZwzUnOTIQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="demonstrator.repository#_r4hyoJlxEemrFZ3y2Npp_A"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_rFc6cJlyEemrFZ3y2Npp_A" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_o6rsAJlyEemrFZ3y2Npp_A" assemblyContext_ProvidedDelegationConnector="_XA0a0JjrEemsLZwzUnOTIQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="demonstrator.repository#_r4hyoJlxEemrFZ3y2Npp_A"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_uBqM4JlyEemrFZ3y2Npp_A" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_rof9IJlyEemrFZ3y2Npp_A" assemblyContext_ProvidedDelegationConnector="_ZXD5cJjrEemsLZwzUnOTIQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="demonstrator.repository#_r4hyoJlxEemrFZ3y2Npp_A"/>
+  </connectors__ComposedStructure>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_sBJYkJlwEemrFZ3y2Npp_A" entityName="ForemanOne">
+    <providedInterface__OperationProvidedRole href="demonstrator.repository#_2AUFwJjTEemTrvLgMAvOgQ"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_vX4q4JlwEemrFZ3y2Npp_A" entityName="ForemanTwo">
+    <providedInterface__OperationProvidedRole href="demonstrator.repository#_2AUFwJjTEemTrvLgMAvOgQ"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_yL31cJlwEemrFZ3y2Npp_A" entityName="FormanThree">
+    <providedInterface__OperationProvidedRole href="demonstrator.repository#_2AUFwJjTEemTrvLgMAvOgQ"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_eQh2cJlyEemrFZ3y2Npp_A" entityName="Gate">
+    <providedInterface__OperationProvidedRole href="demonstrator.repository#_Bur4wJjREemX1MO8tejE0Q"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_iKw3YJlyEemrFZ3y2Npp_A" entityName="Dispenser">
+    <providedInterface__OperationProvidedRole href="demonstrator.repository#_Bur4wJjREemX1MO8tejE0Q"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_lRqW4JlyEemrFZ3y2Npp_A" entityName="FactoryOne">
+    <providedInterface__OperationProvidedRole href="demonstrator.repository#_Bur4wJjREemX1MO8tejE0Q"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_o6rsAJlyEemrFZ3y2Npp_A" entityName="FactoryTwo">
+    <providedInterface__OperationProvidedRole href="demonstrator.repository#_Bur4wJjREemX1MO8tejE0Q"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_rof9IJlyEemrFZ3y2Npp_A" entityName="FactoryThree">
+    <providedInterface__OperationProvidedRole href="demonstrator.repository#_Bur4wJjREemX1MO8tejE0Q"/>
+  </providedRoles_InterfaceProvidingEntity>
 </system:System>
