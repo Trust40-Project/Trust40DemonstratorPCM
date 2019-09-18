@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="ASCII"?>
-<resourceenvironment:ResourceEnvironment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:resourceenvironment="http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2" entityName="New ResourceEnvironment">
-  <linkingResources__ResourceEnvironment id="_uokxAJl0EemrFZ3y2Npp_A" entityName="LinkingResource1" connectedResourceContainers_LinkingResource="_lSekUJl0EemrFZ3y2Npp_A _o4vgYJl0EemrFZ3y2Npp_A _rxCjMJl0EemrFZ3y2Npp_A">
-    <communicationLinkResourceSpecifications_LinkingResource id="_uol_IJl0EemrFZ3y2Npp_A"/>
-  </linkingResources__ResourceEnvironment>
-  <resourceContainer_ResourceEnvironment id="_lSekUJl0EemrFZ3y2Npp_A" entityName="PhysicalAccess"/>
-  <resourceContainer_ResourceEnvironment id="_o4vgYJl0EemrFZ3y2Npp_A" entityName="HR"/>
-  <resourceContainer_ResourceEnvironment id="_rxCjMJl0EemrFZ3y2Npp_A" entityName="Factory"/>
-</resourceenvironment:ResourceEnvironment>

@@ -1,129 +1,166 @@
 <?xml version="1.0" encoding="ASCII"?>
 <repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" id="_72xDIJjQEemX1MO8tejE0Q" entityName="New Repository">
   <components__Repository xsi:type="repository:BasicComponent" id="__2MGEJjQEemX1MO8tejE0Q" entityName="PhysicalAccessComponent">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_r4hyoJlxEemrFZ3y2Npp_A" entityName="ProvideAccess" providedInterface__OperationProvidedRole="_Bur4wJjREemX1MO8tejE0Q"/>
-    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_IdF_UJlyEemrFZ3y2Npp_A" entityName="RequireHRService" requiredInterface__OperationRequiredRole="_zP9okJjUEemTrvLgMAvOgQ"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_r493gJlxEemrFZ3y2Npp_A" describedService__SEFF="_gdDqkJjREemEQuK9qQ3XdA">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_r493gZlxEemrFZ3y2Npp_A" successor_AbstractAction="_KcMwUJlyEemrFZ3y2Npp_A"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_r493gplxEemrFZ3y2Npp_A" predecessor_AbstractAction="_s9Yh4JlxEemrFZ3y2Npp_A"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_s9Yh4JlxEemrFZ3y2Npp_A" entityName="findUser" predecessor_AbstractAction="_KcMwUJlyEemrFZ3y2Npp_A" successor_AbstractAction="_r493gplxEemrFZ3y2Npp_A"/>
-      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_KcMwUJlyEemrFZ3y2Npp_A" entityName="ExternalCallAction1" predecessor_AbstractAction="_r493gZlxEemrFZ3y2Npp_A" successor_AbstractAction="_s9Yh4JlxEemrFZ3y2Npp_A" calledService_ExternalService="_bmrRkJltEemrFZ3y2Npp_A" role_ExternalService="_IdF_UJlyEemrFZ3y2Npp_A"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_ftKwsNn2EemwqMQZe4SIMA" entityName="PhysicalAccess.Provide" providedInterface__OperationProvidedRole="_Bur4wJjREemX1MO8tejE0Q"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_QfGCANoMEemwqMQZe4SIMA" entityName="CheckPhysicalAccess.Provide" providedInterface__OperationProvidedRole="_Yz6NUNoLEemwqMQZe4SIMA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_ftW98Nn2EemwqMQZe4SIMA" describedService__SEFF="_gdDqkJjREemEQuK9qQ3XdA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_ftXlANn2EemwqMQZe4SIMA" successor_AbstractAction="_ftXlAdn2EemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_ftXlAdn2EemwqMQZe4SIMA" predecessor_AbstractAction="_ftXlANn2EemwqMQZe4SIMA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_fuFWsNn2EemwqMQZe4SIMA" describedService__SEFF="_sg2UANn1EemwqMQZe4SIMA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_fuFWsdn2EemwqMQZe4SIMA" successor_AbstractAction="_fuFWstn2EemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_fuFWstn2EemwqMQZe4SIMA" predecessor_AbstractAction="_fuFWsdn2EemwqMQZe4SIMA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_fuLdUNn2EemwqMQZe4SIMA" describedService__SEFF="_wTGdoNn1EemwqMQZe4SIMA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_fuMEYNn2EemwqMQZe4SIMA" successor_AbstractAction="_fuMEYdn2EemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_fuMEYdn2EemwqMQZe4SIMA" predecessor_AbstractAction="_fuMEYNn2EemwqMQZe4SIMA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_QfPzANoMEemwqMQZe4SIMA" describedService__SEFF="_eBOmwNoLEemwqMQZe4SIMA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_QfPzAdoMEemwqMQZe4SIMA" successor_AbstractAction="_QfPzAtoMEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_QfPzAtoMEemwqMQZe4SIMA" predecessor_AbstractAction="_QfPzAdoMEemwqMQZe4SIMA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_QfZkANoMEemwqMQZe4SIMA" describedService__SEFF="_eW8_INoLEemwqMQZe4SIMA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_QfZkAdoMEemwqMQZe4SIMA" successor_AbstractAction="_QfZkAtoMEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_QfZkAtoMEemwqMQZe4SIMA" predecessor_AbstractAction="_QfZkAdoMEemwqMQZe4SIMA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_QffDkNoMEemwqMQZe4SIMA" describedService__SEFF="_eiSscNoLEemwqMQZe4SIMA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_QffDkdoMEemwqMQZe4SIMA" successor_AbstractAction="_QffDktoMEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_QffDktoMEemwqMQZe4SIMA" predecessor_AbstractAction="_QffDkdoMEemwqMQZe4SIMA"/>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_AnJo8JjREemX1MO8tejE0Q" entityName="LocationProvider">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_o5VzAJjUEemTrvLgMAvOgQ" entityName="ProvideLocation" providedInterface__OperationProvidedRole="_5n3bQJjTEemTrvLgMAvOgQ"/>
+  <components__Repository xsi:type="repository:BasicComponent" id="_AnJo8JjREemX1MO8tejE0Q" entityName="LocationSensor">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_o5VzAJjUEemTrvLgMAvOgQ" entityName="PhysicalLocation.Provider" providedInterface__OperationProvidedRole="_5n3bQJjTEemTrvLgMAvOgQ"/>
     <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_o5j1cJjUEemTrvLgMAvOgQ" describedService__SEFF="_9D75gJjTEemTrvLgMAvOgQ">
       <steps_Behaviour xsi:type="seff:StartAction" id="_o5kcgJjUEemTrvLgMAvOgQ" successor_AbstractAction="_o5kcgZjUEemTrvLgMAvOgQ"/>
       <steps_Behaviour xsi:type="seff:StopAction" id="_o5kcgZjUEemTrvLgMAvOgQ" predecessor_AbstractAction="_o5kcgJjUEemTrvLgMAvOgQ"/>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
   <components__Repository xsi:type="repository:BasicComponent" id="_knIhgJjVEemTrvLgMAvOgQ" entityName="ForemanSystem">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_ZsyzgJjYEemTrvLgMAvOgQ" entityName="ProvideProductionServices" providedInterface__OperationProvidedRole="_2AUFwJjTEemTrvLgMAvOgQ"/>
-    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_mj3zoJjYEemTrvLgMAvOgQ" entityName="PhysicalLocation" requiredInterface__OperationRequiredRole="_5n3bQJjTEemTrvLgMAvOgQ"/>
-    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_o-QLYJjYEemTrvLgMAvOgQ" entityName="RequireNotificationServices" requiredInterface__OperationRequiredRole="_svqc8JjXEemTrvLgMAvOgQ"/>
-    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_thuWkJjYEemTrvLgMAvOgQ" entityName="RequireHRServices" requiredInterface__OperationRequiredRole="_zP9okJjUEemTrvLgMAvOgQ"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_Zs0BoJjYEemTrvLgMAvOgQ" describedService__SEFF="_VE47oJjVEemTrvLgMAvOgQ">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_Zs0BoZjYEemTrvLgMAvOgQ" successor_AbstractAction="_mSvLoJltEemrFZ3y2Npp_A"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_Zs0BopjYEemTrvLgMAvOgQ"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_sZRsEJltEemrFZ3y2Npp_A" entityName="selectLateWorker" predecessor_AbstractAction="_3oq8sJltEemrFZ3y2Npp_A" successor_AbstractAction="_3oq8s5ltEemrFZ3y2Npp_A"/>
-      <steps_Behaviour xsi:type="seff:LoopAction" id="_3oq8sJltEemrFZ3y2Npp_A" entityName="LoopAction1" predecessor_AbstractAction="_mSvLoJltEemrFZ3y2Npp_A" successor_AbstractAction="_sZRsEJltEemrFZ3y2Npp_A">
-        <bodyBehaviour_Loop id="_3oq8sZltEemrFZ3y2Npp_A">
-          <steps_Behaviour xsi:type="seff:StartAction" id="_3oq8spltEemrFZ3y2Npp_A" successor_AbstractAction="_DBjggJluEemrFZ3y2Npp_A"/>
-          <steps_Behaviour xsi:type="seff:StopAction" id="_3oq8s5ltEemrFZ3y2Npp_A" predecessor_AbstractAction="_DBjggJluEemrFZ3y2Npp_A"/>
-          <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DBjggJluEemrFZ3y2Npp_A" entityName="ExternalCallAction2" predecessor_AbstractAction="_3oq8spltEemrFZ3y2Npp_A" successor_AbstractAction="_3oq8s5ltEemrFZ3y2Npp_A" calledService_ExternalService="_9D75gJjTEemTrvLgMAvOgQ" role_ExternalService="_mj3zoJjYEemTrvLgMAvOgQ"/>
-        </bodyBehaviour_Loop>
-        <iterationCount_LoopAction specification="1"/>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_mSvLoJltEemrFZ3y2Npp_A" entityName="ExternalCallAction1" predecessor_AbstractAction="_Zs0BoZjYEemTrvLgMAvOgQ" successor_AbstractAction="_3oq8sJltEemrFZ3y2Npp_A" calledService_ExternalService="_bmrRkJltEemrFZ3y2Npp_A" role_ExternalService="_thuWkJjYEemTrvLgMAvOgQ"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_3oq8s5ltEemrFZ3y2Npp_A" predecessor_AbstractAction="_sZRsEJltEemrFZ3y2Npp_A"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_1vkkANoOEemwqMQZe4SIMA" entityName="Foreman.Provide" providedInterface__OperationProvidedRole="_jL8QwNoOEemwqMQZe4SIMA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_a7IN8NoKEemwqMQZe4SIMA" entityName="WorkerManagement.Required" requiredInterface__OperationRequiredRole="_iIfB8NoJEemwqMQZe4SIMA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_1v9lkNoOEemwqMQZe4SIMA" describedService__SEFF="_mzx6INoOEemwqMQZe4SIMA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_1v-MoNoOEemwqMQZe4SIMA" successor_AbstractAction="_CVhX4NoPEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_1v-ModoOEemwqMQZe4SIMA" predecessor_AbstractAction="_6yH34NoOEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_6yH34NoOEemwqMQZe4SIMA" entityName="seePhoneNumber" predecessor_AbstractAction="_CVhX4NoPEemwqMQZe4SIMA" successor_AbstractAction="_1v-ModoOEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_CVhX4NoPEemwqMQZe4SIMA" entityName="ExternalCallAction1" predecessor_AbstractAction="_1v-MoNoOEemwqMQZe4SIMA" successor_AbstractAction="_6yH34NoOEemwqMQZe4SIMA" calledService_ExternalService="_ptrcQNoKEemwqMQZe4SIMA" role_ExternalService="_a7IN8NoKEemwqMQZe4SIMA"/>
     </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_ZtBdAJjYEemTrvLgMAvOgQ" describedService__SEFF="_5bqOcJjXEemTrvLgMAvOgQ">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_ZtBdAZjYEemTrvLgMAvOgQ" successor_AbstractAction="_5FK6cJluEemrFZ3y2Npp_A"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_ZtBdApjYEemTrvLgMAvOgQ" predecessor_AbstractAction="_NCngUJlvEemrFZ3y2Npp_A"/>
-      <steps_Behaviour xsi:type="seff:LoopAction" id="_5FK6cJluEemrFZ3y2Npp_A" entityName="LoopAction1" predecessor_AbstractAction="_ZtBdAZjYEemTrvLgMAvOgQ" successor_AbstractAction="_NCngUJlvEemrFZ3y2Npp_A">
-        <bodyBehaviour_Loop id="_5FLhgJluEemrFZ3y2Npp_A">
-          <steps_Behaviour xsi:type="seff:StartAction" id="_5FLhgZluEemrFZ3y2Npp_A" successor_AbstractAction="_6LDkcJluEemrFZ3y2Npp_A"/>
-          <steps_Behaviour xsi:type="seff:StopAction" id="_5FLhgpluEemrFZ3y2Npp_A" predecessor_AbstractAction="_6LDkcJluEemrFZ3y2Npp_A"/>
-          <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_6LDkcJluEemrFZ3y2Npp_A" entityName="ExternalCallAction1" predecessor_AbstractAction="_5FLhgZluEemrFZ3y2Npp_A" successor_AbstractAction="_5FLhgpluEemrFZ3y2Npp_A" calledService_ExternalService="_O-wD0JjVEemTrvLgMAvOgQ" role_ExternalService="_thuWkJjYEemTrvLgMAvOgQ"/>
-        </bodyBehaviour_Loop>
-        <iterationCount_LoopAction specification="1"/>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:LoopAction" id="_NCngUJlvEemrFZ3y2Npp_A" entityName="LoopAction2" predecessor_AbstractAction="_5FK6cJluEemrFZ3y2Npp_A" successor_AbstractAction="_ZtBdApjYEemTrvLgMAvOgQ">
-        <bodyBehaviour_Loop id="_NCoHYJlvEemrFZ3y2Npp_A">
-          <steps_Behaviour xsi:type="seff:StartAction" id="_NCoHYZlvEemrFZ3y2Npp_A" successor_AbstractAction="_LZwFEJlvEemrFZ3y2Npp_A"/>
-          <steps_Behaviour xsi:type="seff:StopAction" id="_NCoHYplvEemrFZ3y2Npp_A" predecessor_AbstractAction="_LZwFEJlvEemrFZ3y2Npp_A"/>
-          <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_LZwFEJlvEemrFZ3y2Npp_A" entityName="ExternalCallAction1" predecessor_AbstractAction="_NCoHYZlvEemrFZ3y2Npp_A" successor_AbstractAction="_NCoHYplvEemrFZ3y2Npp_A" calledService_ExternalService="_u-MKAJjXEemTrvLgMAvOgQ" role_ExternalService="_o-QLYJjYEemTrvLgMAvOgQ"/>
-        </bodyBehaviour_Loop>
-        <iterationCount_LoopAction specification="1"/>
-      </steps_Behaviour>
-    </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_nxnvAJluEemrFZ3y2Npp_A" describedService__SEFF="_fPQFUJluEemrFZ3y2Npp_A">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_oGsAEJluEemrFZ3y2Npp_A" successor_AbstractAction="_qcSlgJluEemrFZ3y2Npp_A"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_oGsAEZluEemrFZ3y2Npp_A" predecessor_AbstractAction="_qcSlgJluEemrFZ3y2Npp_A"/>
-      <steps_Behaviour xsi:type="seff:LoopAction" id="_qcSlgJluEemrFZ3y2Npp_A" entityName="LoopAction1" predecessor_AbstractAction="_oGsAEJluEemrFZ3y2Npp_A" successor_AbstractAction="_oGsAEZluEemrFZ3y2Npp_A">
-        <bodyBehaviour_Loop id="_qcTMkJluEemrFZ3y2Npp_A">
-          <steps_Behaviour xsi:type="seff:StartAction" id="_qcTMkZluEemrFZ3y2Npp_A" successor_AbstractAction="_skavoJluEemrFZ3y2Npp_A"/>
-          <steps_Behaviour xsi:type="seff:StopAction" id="_qcTMkpluEemrFZ3y2Npp_A" predecessor_AbstractAction="_skavoJluEemrFZ3y2Npp_A"/>
-          <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_skavoJluEemrFZ3y2Npp_A" entityName="ExternalCallAction1" predecessor_AbstractAction="_qcTMkZluEemrFZ3y2Npp_A" successor_AbstractAction="_qcTMkpluEemrFZ3y2Npp_A" calledService_ExternalService="_8D2YsJjXEemTrvLgMAvOgQ" role_ExternalService="_o-QLYJjYEemTrvLgMAvOgQ"/>
-        </bodyBehaviour_Loop>
-        <iterationCount_LoopAction specification="1"/>
-      </steps_Behaviour>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_1wJLwNoOEemwqMQZe4SIMA" describedService__SEFF="_sdIIQNoOEemwqMQZe4SIMA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_1wJLwdoOEemwqMQZe4SIMA" successor_AbstractAction="_HmC2UNoPEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_1wJLwtoOEemwqMQZe4SIMA" predecessor_AbstractAction="_IwhFYNoPEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_HmC2UNoPEemwqMQZe4SIMA" entityName="ExternalCallAction1" predecessor_AbstractAction="_1wJLwdoOEemwqMQZe4SIMA" successor_AbstractAction="_IwhFYNoPEemwqMQZe4SIMA" calledService_ExternalService="_i_VxcNoJEemwqMQZe4SIMA" role_ExternalService="_a7IN8NoKEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_IwhFYNoPEemwqMQZe4SIMA" entityName="getPhoneNumber" predecessor_AbstractAction="_HmC2UNoPEemwqMQZe4SIMA" successor_AbstractAction="_1wJLwtoOEemwqMQZe4SIMA"/>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
   <components__Repository xsi:type="repository:BasicComponent" id="_F0OGkJjYEemTrvLgMAvOgQ" entityName="NotificationComponent">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_MDJuAJjYEemTrvLgMAvOgQ" entityName="ProvideNotificationService" providedInterface__OperationProvidedRole="_svqc8JjXEemTrvLgMAvOgQ"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_MDJuAJjYEemTrvLgMAvOgQ" entityName="NotificationSystem.Provide" providedInterface__OperationProvidedRole="_svqc8JjXEemTrvLgMAvOgQ"/>
     <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_MDLjMJjYEemTrvLgMAvOgQ" describedService__SEFF="_u-MKAJjXEemTrvLgMAvOgQ">
       <steps_Behaviour xsi:type="seff:StartAction" id="_MDLjMZjYEemTrvLgMAvOgQ" successor_AbstractAction="_MDLjMpjYEemTrvLgMAvOgQ"/>
       <steps_Behaviour xsi:type="seff:StopAction" id="_MDLjMpjYEemTrvLgMAvOgQ" predecessor_AbstractAction="_MDLjMZjYEemTrvLgMAvOgQ"/>
     </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_MDoPIJjYEemTrvLgMAvOgQ" describedService__SEFF="_8D2YsJjXEemTrvLgMAvOgQ">
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_MDoPIJjYEemTrvLgMAvOgQ">
       <steps_Behaviour xsi:type="seff:StartAction" id="_MDoPIZjYEemTrvLgMAvOgQ" successor_AbstractAction="_MDoPIpjYEemTrvLgMAvOgQ"/>
       <steps_Behaviour xsi:type="seff:StopAction" id="_MDoPIpjYEemTrvLgMAvOgQ" predecessor_AbstractAction="_MDoPIZjYEemTrvLgMAvOgQ"/>
     </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_WKh80Nn2EemwqMQZe4SIMA" describedService__SEFF="_7I9z8Nn1EemwqMQZe4SIMA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_XAfUcNn2EemwqMQZe4SIMA" successor_AbstractAction="_XAfUcdn2EemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_XAfUcdn2EemwqMQZe4SIMA" predecessor_AbstractAction="_XAfUcNn2EemwqMQZe4SIMA"/>
+    </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
   <components__Repository xsi:type="repository:BasicComponent" id="_UotOkJjYEemTrvLgMAvOgQ" entityName="HRComponent">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_ry4PIJjYEemTrvLgMAvOgQ" entityName="ProvideHRServices" providedInterface__OperationProvidedRole="_zP9okJjUEemTrvLgMAvOgQ"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_ry5dQJjYEemTrvLgMAvOgQ" describedService__SEFF="_066HcJjUEemTrvLgMAvOgQ">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_ry6EUJjYEemTrvLgMAvOgQ" successor_AbstractAction="_ry6EUZjYEemTrvLgMAvOgQ"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_ry6EUZjYEemTrvLgMAvOgQ" predecessor_AbstractAction="_ry6EUJjYEemTrvLgMAvOgQ"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_92faENoJEemwqMQZe4SIMA" entityName="ShiftManagement.Provide" providedInterface__OperationProvidedRole="_zP9okJjUEemTrvLgMAvOgQ"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_IaYPkNoKEemwqMQZe4SIMA" entityName="WorkerManagement" providedInterface__OperationProvidedRole="_iIfB8NoJEemwqMQZe4SIMA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_JEm4UNoKEemwqMQZe4SIMA" entityName="HRComponent.PhysicalLocation.OperationRequiredRole1" requiredInterface__OperationRequiredRole="_5n3bQJjTEemTrvLgMAvOgQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_QMXvwNoLEemwqMQZe4SIMA" entityName="NotificationSystem.Require" requiredInterface__OperationRequiredRole="_svqc8JjXEemTrvLgMAvOgQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_SrdL4NoMEemwqMQZe4SIMA" entityName="PhysicalAccessRightManagement.Required" requiredInterface__OperationRequiredRole="_Bur4wJjREemX1MO8tejE0Q"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_92goMNoJEemwqMQZe4SIMA" describedService__SEFF="_066HcJjUEemTrvLgMAvOgQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_92hPQNoJEemwqMQZe4SIMA" successor_AbstractAction="_92hPQdoJEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_92hPQdoJEemwqMQZe4SIMA" predecessor_AbstractAction="_92hPQNoJEemwqMQZe4SIMA"/>
     </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_rzU7EJjYEemTrvLgMAvOgQ" describedService__SEFF="_O-wD0JjVEemTrvLgMAvOgQ">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_rzU7EZjYEemTrvLgMAvOgQ" successor_AbstractAction="_rzU7EpjYEemTrvLgMAvOgQ"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_rzU7EpjYEemTrvLgMAvOgQ" predecessor_AbstractAction="_rzU7EZjYEemTrvLgMAvOgQ"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_920xQNoJEemwqMQZe4SIMA" describedService__SEFF="_O-wD0JjVEemTrvLgMAvOgQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_921YUNoJEemwqMQZe4SIMA" successor_AbstractAction="_SJKPwNoPEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_921YUdoJEemwqMQZe4SIMA" predecessor_AbstractAction="_rWYYENoNEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Sctv0NoNEemwqMQZe4SIMA" entityName="ExternalCallAction1" predecessor_AbstractAction="_SJKPwNoPEemwqMQZe4SIMA" successor_AbstractAction="_VR7CYNoNEemwqMQZe4SIMA" calledService_ExternalService="_u-MKAJjXEemTrvLgMAvOgQ" role_ExternalService="_QMXvwNoLEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_VR7CYNoNEemwqMQZe4SIMA" entityName="ExternalCallAction2" predecessor_AbstractAction="_Sctv0NoNEemwqMQZe4SIMA" successor_AbstractAction="_nv6AoNoNEemwqMQZe4SIMA" calledService_ExternalService="_7I9z8Nn1EemwqMQZe4SIMA" role_ExternalService="_QMXvwNoLEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_nv6AoNoNEemwqMQZe4SIMA" entityName="ExternalCallAction3" predecessor_AbstractAction="_VR7CYNoNEemwqMQZe4SIMA" successor_AbstractAction="_pGojANoNEemwqMQZe4SIMA" calledService_ExternalService="_gdDqkJjREemEQuK9qQ3XdA" role_ExternalService="_SrdL4NoMEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_pGojANoNEemwqMQZe4SIMA" entityName="ExternalCallAction4" predecessor_AbstractAction="_nv6AoNoNEemwqMQZe4SIMA" successor_AbstractAction="_rWYYENoNEemwqMQZe4SIMA" calledService_ExternalService="_sg2UANn1EemwqMQZe4SIMA" role_ExternalService="_SrdL4NoMEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_rWYYENoNEemwqMQZe4SIMA" entityName="ExternalCallAction5" predecessor_AbstractAction="_pGojANoNEemwqMQZe4SIMA" successor_AbstractAction="_921YUdoJEemwqMQZe4SIMA" calledService_ExternalService="_wTGdoNn1EemwqMQZe4SIMA" role_ExternalService="_SrdL4NoMEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_SJKPwNoPEemwqMQZe4SIMA" entityName="getLateWorkers" predecessor_AbstractAction="_921YUNoJEemwqMQZe4SIMA" successor_AbstractAction="_Sctv0NoNEemwqMQZe4SIMA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_9297MNoJEemwqMQZe4SIMA" describedService__SEFF="_3y3qwNoJEemwqMQZe4SIMA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_9297MdoJEemwqMQZe4SIMA" successor_AbstractAction="_eg0QUNoMEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_9297MtoJEemwqMQZe4SIMA" predecessor_AbstractAction="_BZZ_0NoNEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_eg0QUNoMEemwqMQZe4SIMA" entityName="LoadUser" predecessor_AbstractAction="_9297MdoJEemwqMQZe4SIMA" successor_AbstractAction="_kIxXUNoMEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:LoopAction" id="_kIxXUNoMEemwqMQZe4SIMA" entityName="LoopAction1" predecessor_AbstractAction="_eg0QUNoMEemwqMQZe4SIMA" successor_AbstractAction="_BZZ_0NoNEemwqMQZe4SIMA">
+        <bodyBehaviour_Loop id="_kI224NoMEemwqMQZe4SIMA">
+          <steps_Behaviour xsi:type="seff:StartAction" id="_kI3d8NoMEemwqMQZe4SIMA" successor_AbstractAction="_mSjHQNoMEemwqMQZe4SIMA"/>
+          <steps_Behaviour xsi:type="seff:StopAction" id="_kI3d8doMEemwqMQZe4SIMA" predecessor_AbstractAction="_mSjHQNoMEemwqMQZe4SIMA"/>
+          <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_mSjHQNoMEemwqMQZe4SIMA" entityName="ExternalCallAction1" predecessor_AbstractAction="_kI3d8NoMEemwqMQZe4SIMA" successor_AbstractAction="_kI3d8doMEemwqMQZe4SIMA" calledService_ExternalService="_9D75gJjTEemTrvLgMAvOgQ" role_ExternalService="_JEm4UNoKEemwqMQZe4SIMA"/>
+        </bodyBehaviour_Loop>
+        <iterationCount_LoopAction specification="1"/>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:LoopAction" id="_BZZ_0NoNEemwqMQZe4SIMA" entityName="LoopAction2" predecessor_AbstractAction="_kIxXUNoMEemwqMQZe4SIMA" successor_AbstractAction="_9297MtoJEemwqMQZe4SIMA">
+        <bodyBehaviour_Loop id="_BZZ_0doNEemwqMQZe4SIMA">
+          <steps_Behaviour xsi:type="seff:StartAction" id="_BZZ_0toNEemwqMQZe4SIMA" successor_AbstractAction="_DtrIgNoNEemwqMQZe4SIMA"/>
+          <steps_Behaviour xsi:type="seff:StopAction" id="_BZZ_09oNEemwqMQZe4SIMA" predecessor_AbstractAction="_DtrIgNoNEemwqMQZe4SIMA"/>
+          <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DtrIgNoNEemwqMQZe4SIMA" entityName="ExternalCallAction1" predecessor_AbstractAction="_BZZ_0toNEemwqMQZe4SIMA" successor_AbstractAction="_BZZ_09oNEemwqMQZe4SIMA" calledService_ExternalService="_BQ9ZQNSNEemd96bj0vKT5w" role_ExternalService="_QMXvwNoLEemwqMQZe4SIMA"/>
+        </bodyBehaviour_Loop>
+        <iterationCount_LoopAction specification="1"/>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_IaY2oNoKEemwqMQZe4SIMA" describedService__SEFF="_i_VxcNoJEemwqMQZe4SIMA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_IaY2odoKEemwqMQZe4SIMA" successor_AbstractAction="_NZRLcNoKEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_IaY2otoKEemwqMQZe4SIMA" predecessor_AbstractAction="_PEbFsNoKEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_NZRLcNoKEemwqMQZe4SIMA" entityName="ExternalCallAction1" predecessor_AbstractAction="_IaY2odoKEemwqMQZe4SIMA" successor_AbstractAction="_PEbFsNoKEemwqMQZe4SIMA" calledService_ExternalService="_9D75gJjTEemTrvLgMAvOgQ" role_ExternalService="_JEm4UNoKEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_PEbFsNoKEemwqMQZe4SIMA" entityName="CalculateDistance" predecessor_AbstractAction="_NZRLcNoKEemwqMQZe4SIMA" successor_AbstractAction="_IaY2otoKEemwqMQZe4SIMA"/>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_Bur4wJjREemX1MO8tejE0Q" entityName="PhysicalAccess">
-    <signatures__OperationInterface id="_gdDqkJjREemEQuK9qQ3XdA" entityName="checkAccess">
-      <parameters__OperationSignature dataType__Parameter="__fz0IJjVEemTrvLgMAvOgQ" parameterName="user"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_Bur4wJjREemX1MO8tejE0Q" entityName="PhysicalAccessRightManagement">
+    <signatures__OperationInterface id="_gdDqkJjREemEQuK9qQ3XdA" entityName="setAccessGate">
+      <parameters__OperationSignature dataType__Parameter="_sdlD4JjWEemTrvLgMAvOgQ" parameterName="user"/>
+      <parameters__OperationSignature parameterName="access">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_sg2UANn1EemwqMQZe4SIMA" entityName="setAccessDispenser">
+      <parameters__OperationSignature dataType__Parameter="_sdlD4JjWEemTrvLgMAvOgQ" parameterName="user"/>
+      <parameters__OperationSignature parameterName="access">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_wTGdoNn1EemwqMQZe4SIMA" entityName="setAccessDoor">
+      <parameters__OperationSignature dataType__Parameter="_sdlD4JjWEemTrvLgMAvOgQ" parameterName="user"/>
+      <parameters__OperationSignature parameterName="access">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+      </parameters__OperationSignature>
       <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
     </signatures__OperationInterface>
   </interfaces__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_2AUFwJjTEemTrvLgMAvOgQ" entityName="ProductionPlanning">
-    <signatures__OperationInterface id="_VE47oJjVEemTrvLgMAvOgQ" entityName="checkLateWorkers" returnType__OperationSignature="_sdlD4JjWEemTrvLgMAvOgQ">
-      <parameters__OperationSignature parameterName="shiftID">
-        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
-      </parameters__OperationSignature>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_iIfB8NoJEemwqMQZe4SIMA" entityName="WorkerManagement">
+    <signatures__OperationInterface id="_i_VxcNoJEemwqMQZe4SIMA" entityName="getDistance">
+      <parameters__OperationSignature dataType__Parameter="__fz0IJjVEemTrvLgMAvOgQ" parameterName="user"/>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
     </signatures__OperationInterface>
-    <signatures__OperationInterface id="_5bqOcJjXEemTrvLgMAvOgQ" entityName="getReplacementWorker">
-      <parameters__OperationSignature dataType__Parameter="_sdlD4JjWEemTrvLgMAvOgQ" parameterName="listLateWorker"/>
-    </signatures__OperationInterface>
-    <signatures__OperationInterface id="_fPQFUJluEemrFZ3y2Npp_A" entityName="informLateWorker">
-      <parameters__OperationSignature dataType__Parameter="_sdlD4JjWEemTrvLgMAvOgQ" parameterName="listLateWorkers"/>
-    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_ptrcQNoKEemwqMQZe4SIMA" entityName="getPhoneNumber" returnType__OperationSignature="_1pGscNoKEemwqMQZe4SIMA"/>
   </interfaces__Repository>
   <interfaces__Repository xsi:type="repository:OperationInterface" id="_5n3bQJjTEemTrvLgMAvOgQ" entityName="PhysicalLocation">
-    <signatures__OperationInterface id="_9D75gJjTEemTrvLgMAvOgQ" entityName="getLocation" returnType__OperationSignature="_JDYuHJjUEemTrvLgMAvOgQ">
+    <signatures__OperationInterface id="_9D75gJjTEemTrvLgMAvOgQ" entityName="getPosition" returnType__OperationSignature="_JDYuHJjUEemTrvLgMAvOgQ">
       <parameters__OperationSignature dataType__Parameter="__fz0IJjVEemTrvLgMAvOgQ" parameterName="user"/>
     </signatures__OperationInterface>
   </interfaces__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_zP9okJjUEemTrvLgMAvOgQ" entityName="HRManagement">
-    <signatures__OperationInterface id="_066HcJjUEemTrvLgMAvOgQ" entityName="createShift"/>
-    <signatures__OperationInterface id="_O-wD0JjVEemTrvLgMAvOgQ" entityName="findReplacementWorkers" returnType__OperationSignature="__fz0IJjVEemTrvLgMAvOgQ">
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_zP9okJjUEemTrvLgMAvOgQ" entityName="ShiftManagement">
+    <signatures__OperationInterface id="_066HcJjUEemTrvLgMAvOgQ" entityName="getShift" returnType__OperationSignature="_sdlD4JjWEemTrvLgMAvOgQ">
       <parameters__OperationSignature parameterName="shiftID">
         <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
       </parameters__OperationSignature>
     </signatures__OperationInterface>
-    <signatures__OperationInterface id="_bmrRkJltEemrFZ3y2Npp_A" entityName="getShiftWorkers" returnType__OperationSignature="_sdlD4JjWEemTrvLgMAvOgQ">
+    <signatures__OperationInterface id="_O-wD0JjVEemTrvLgMAvOgQ" entityName="findReplacementWorkers" returnType__OperationSignature="_sdlD4JjWEemTrvLgMAvOgQ">
+      <parameters__OperationSignature parameterName="shiftID">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_3y3qwNoJEemwqMQZe4SIMA" entityName="checkLateWorkter" returnType__OperationSignature="_sdlD4JjWEemTrvLgMAvOgQ">
       <parameters__OperationSignature parameterName="shiftID">
         <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
       </parameters__OperationSignature>
@@ -131,9 +168,34 @@
   </interfaces__Repository>
   <interfaces__Repository xsi:type="repository:OperationInterface" id="_svqc8JjXEemTrvLgMAvOgQ" entityName="NotificationSystem">
     <signatures__OperationInterface id="_u-MKAJjXEemTrvLgMAvOgQ" entityName="notifyNewWorker">
+      <parameters__OperationSignature dataType__Parameter="_sdlD4JjWEemTrvLgMAvOgQ" parameterName="user"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_BQ9ZQNSNEemd96bj0vKT5w" entityName="notifyLateWorker">
+      <parameters__OperationSignature dataType__Parameter="_sdlD4JjWEemTrvLgMAvOgQ" parameterName="user"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_7I9z8Nn1EemwqMQZe4SIMA" entityName="notifyCancledWorker">
+      <parameters__OperationSignature dataType__Parameter="_sdlD4JjWEemTrvLgMAvOgQ" parameterName="user"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_Yz6NUNoLEemwqMQZe4SIMA" entityName="CheckPhysicalAccess">
+    <signatures__OperationInterface id="_eBOmwNoLEemwqMQZe4SIMA" entityName="checkAccessGate">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_eW8_INoLEemwqMQZe4SIMA" entityName="checkAccessDispenser">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_eiSscNoLEemwqMQZe4SIMA" entityName="checkAccessDoor">
+      <parameters__OperationSignature parameterName="doorID">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_jL8QwNoOEemwqMQZe4SIMA" entityName="Foreman">
+    <signatures__OperationInterface id="_mzx6INoOEemwqMQZe4SIMA" entityName="seePhoneNumber">
       <parameters__OperationSignature dataType__Parameter="__fz0IJjVEemTrvLgMAvOgQ" parameterName="user"/>
     </signatures__OperationInterface>
-    <signatures__OperationInterface id="_8D2YsJjXEemTrvLgMAvOgQ" entityName="notifyLateWorker">
+    <signatures__OperationInterface id="_sdIIQNoOEemwqMQZe4SIMA" entityName="seeDistance">
       <parameters__OperationSignature dataType__Parameter="__fz0IJjVEemTrvLgMAvOgQ" parameterName="user"/>
     </signatures__OperationInterface>
   </interfaces__Repository>
@@ -154,4 +216,7 @@
     </innerDeclaration_CompositeDataType>
   </dataTypes__Repository>
   <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_sdlD4JjWEemTrvLgMAvOgQ" entityName="ListOfUsers" innerType_CollectionDataType="__fz0IJjVEemTrvLgMAvOgQ"/>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_1pGscNoKEemwqMQZe4SIMA" entityName="PhoneNumber">
+    <innerType_CollectionDataType xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.4"/>
+  </dataTypes__Repository>
 </repository:Repository>
