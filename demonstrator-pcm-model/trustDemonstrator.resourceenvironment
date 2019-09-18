@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<resourceenvironment:ResourceEnvironment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:resourceenvironment="http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2" entityName="demonstrator resourceenvironment">
+  <linkingResources__ResourceEnvironment id="_sHaPkNoREemwqMQZe4SIMA" entityName="LinkingResource1" connectedResourceContainers_LinkingResource="_qKoZ0NoREemwqMQZe4SIMA _qyz0INoREemwqMQZe4SIMA _rJufUNoREemwqMQZe4SIMA">
+    <communicationLinkResourceSpecifications_LinkingResource id="_sHcEwNoREemwqMQZe4SIMA"/>
+  </linkingResources__ResourceEnvironment>
+  <resourceContainer_ResourceEnvironment id="_qKoZ0NoREemwqMQZe4SIMA" entityName="RFID_READER"/>
+  <resourceContainer_ResourceEnvironment id="_qyz0INoREemwqMQZe4SIMA" entityName="BI_System"/>
+  <resourceContainer_ResourceEnvironment id="_rJufUNoREemwqMQZe4SIMA" entityName="Production"/>
+</resourceenvironment:ResourceEnvironment>
