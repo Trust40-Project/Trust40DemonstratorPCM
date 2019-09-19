@@ -50,4 +50,24 @@
       </actions_ScenarioBehaviour>
     </scenarioBehaviour_UsageScenario>
   </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_LznW0Nq7EemisLuQNxW24A" entityName="PollingTemperature">
+    <scenarioBehaviour_UsageScenario id="_PwVEANq7EemisLuQNxW24A" entityName="ScenarioBehaviour">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_PwVrENq7EemisLuQNxW24A" successor="_x2vIoNq7EemisLuQNxW24A"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_PwVrEdq7EemisLuQNxW24A" predecessor="_x2vIoNq7EemisLuQNxW24A"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_x2vIoNq7EemisLuQNxW24A" entityName="EntryLevelSystemCall1" successor="_PwVrEdq7EemisLuQNxW24A" predecessor="_PwVrENq7EemisLuQNxW24A">
+        <providedRole_EntryLevelSystemCall href="demonstrator.system#_rIw0wNq7EemisLuQNxW24A"/>
+        <operationSignature__EntryLevelSystemCall href="demonstrator.repository#_c2ZiYNq7EemisLuQNxW24A"/>
+      </actions_ScenarioBehaviour>
+    </scenarioBehaviour_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_0ro5MNq7EemisLuQNxW24A" entityName="ErrorProduction">
+    <scenarioBehaviour_UsageScenario id="_7tOFkNq7EemisLuQNxW24A" entityName="ScenarioBehaviour">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_7tOFkdq7EemisLuQNxW24A" successor="_9qUEYNq7EemisLuQNxW24A"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_7tOsoNq7EemisLuQNxW24A" predecessor="_9qUEYNq7EemisLuQNxW24A"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9qUEYNq7EemisLuQNxW24A" entityName="EntryLevelSystemCall1" successor="_7tOsoNq7EemisLuQNxW24A" predecessor="_7tOFkdq7EemisLuQNxW24A">
+        <providedRole_EntryLevelSystemCall href="demonstrator.system#_RvkOkNoQEemwqMQZe4SIMA"/>
+        <operationSignature__EntryLevelSystemCall href="demonstrator.repository#_Q0AEUNq3EemisLuQNxW24A"/>
+      </actions_ScenarioBehaviour>
+    </scenarioBehaviour_UsageScenario>
+  </usageScenario_UsageModel>
 </usagemodel:UsageModel>

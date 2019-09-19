@@ -22,4 +22,12 @@
     <resourceContainer_AllocationContext href="trustDemonstrator.resourceenvironment#_qKoZ0NoREemwqMQZe4SIMA"/>
     <assemblyContext_AllocationContext href="demonstrator.system#_mufVANoPEemwqMQZe4SIMA"/>
   </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_rj6NwNq9EemqBeSV-YAuMg" entityName="Allocation_Assembly_ProductionBI-System">
+    <resourceContainer_AllocationContext href="trustDemonstrator.resourceenvironment#_qyz0INoREemwqMQZe4SIMA"/>
+    <assemblyContext_AllocationContext href="demonstrator.system#__WyUoNq4EemisLuQNxW24A"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_r8Mx8Nq9EemqBeSV-YAuMg" entityName="Allocation_Assembly_MachineSystem">
+    <resourceContainer_AllocationContext href="trustDemonstrator.resourceenvironment#_rJufUNoREemwqMQZe4SIMA"/>
+    <assemblyContext_AllocationContext href="demonstrator.system#_ENasYNq5EemisLuQNxW24A"/>
+  </allocationContexts_Allocation>
 </allocation:Allocation>

@@ -31,13 +31,16 @@
   <components__Repository xsi:type="repository:BasicComponent" id="_AnJo8JjREemX1MO8tejE0Q" entityName="LocationSensor">
     <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_o5VzAJjUEemTrvLgMAvOgQ" entityName="PhysicalLocation.Provider" providedInterface__OperationProvidedRole="_5n3bQJjTEemTrvLgMAvOgQ"/>
     <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_o5j1cJjUEemTrvLgMAvOgQ" describedService__SEFF="_9D75gJjTEemTrvLgMAvOgQ">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_o5kcgJjUEemTrvLgMAvOgQ" successor_AbstractAction="_o5kcgZjUEemTrvLgMAvOgQ"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_o5kcgZjUEemTrvLgMAvOgQ" predecessor_AbstractAction="_o5kcgJjUEemTrvLgMAvOgQ"/>
+      <steps_Behaviour xsi:type="seff:StartAction" id="_o5kcgJjUEemTrvLgMAvOgQ" successor_AbstractAction="_-iAE4Nq8EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_o5kcgZjUEemTrvLgMAvOgQ" predecessor_AbstractAction="_-iAE4Nq8EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_-iAE4Nq8EemisLuQNxW24A" entityName="calculateDistance" predecessor_AbstractAction="_o5kcgJjUEemTrvLgMAvOgQ" successor_AbstractAction="_o5kcgZjUEemTrvLgMAvOgQ"/>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
   <components__Repository xsi:type="repository:BasicComponent" id="_knIhgJjVEemTrvLgMAvOgQ" entityName="ForemanSystem">
     <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_1vkkANoOEemwqMQZe4SIMA" entityName="Foreman.Provide" providedInterface__OperationProvidedRole="_jL8QwNoOEemwqMQZe4SIMA"/>
     <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_a7IN8NoKEemwqMQZe4SIMA" entityName="WorkerManagement.Required" requiredInterface__OperationRequiredRole="_iIfB8NoJEemwqMQZe4SIMA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_HLKsYNq4EemisLuQNxW24A" entityName="SupplierManagement.Require" requiredInterface__OperationRequiredRole="_a_lukNq3EemisLuQNxW24A"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_MRH5kNq4EemisLuQNxW24A" entityName="ProductionBI.Require" requiredInterface__OperationRequiredRole="__8QPoNqsEemisLuQNxW24A"/>
     <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_1v9lkNoOEemwqMQZe4SIMA" describedService__SEFF="_mzx6INoOEemwqMQZe4SIMA">
       <steps_Behaviour xsi:type="seff:StartAction" id="_1v-MoNoOEemwqMQZe4SIMA" successor_AbstractAction="_CVhX4NoPEemwqMQZe4SIMA"/>
       <steps_Behaviour xsi:type="seff:StopAction" id="_1v-ModoOEemwqMQZe4SIMA" predecessor_AbstractAction="_6yH34NoOEemwqMQZe4SIMA"/>
@@ -50,31 +53,43 @@
       <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_HmC2UNoPEemwqMQZe4SIMA" entityName="ExternalCallAction1" predecessor_AbstractAction="_1wJLwdoOEemwqMQZe4SIMA" successor_AbstractAction="_IwhFYNoPEemwqMQZe4SIMA" calledService_ExternalService="_i_VxcNoJEemwqMQZe4SIMA" role_ExternalService="_a7IN8NoKEemwqMQZe4SIMA"/>
       <steps_Behaviour xsi:type="seff:InternalAction" id="_IwhFYNoPEemwqMQZe4SIMA" entityName="getPhoneNumber" predecessor_AbstractAction="_HmC2UNoPEemwqMQZe4SIMA" successor_AbstractAction="_1wJLwtoOEemwqMQZe4SIMA"/>
     </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_Nan4QNq4EemisLuQNxW24A" describedService__SEFF="_Q0AEUNq3EemisLuQNxW24A">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_NsC_cNq4EemisLuQNxW24A" successor_AbstractAction="_PmNmENq4EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_NsC_cdq4EemisLuQNxW24A" predecessor_AbstractAction="_TSpbkNq4EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_PmNmENq4EemisLuQNxW24A" entityName="checkProduct" predecessor_AbstractAction="_NsC_cNq4EemisLuQNxW24A" successor_AbstractAction="_P8PgcNq4EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_P8PgcNq4EemisLuQNxW24A" entityName="ExternalCallAction1" predecessor_AbstractAction="_PmNmENq4EemisLuQNxW24A" successor_AbstractAction="_TSpbkNq4EemisLuQNxW24A" calledService_ExternalService="_Z75MANquEemisLuQNxW24A" role_ExternalService="_MRH5kNq4EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_TSpbkNq4EemisLuQNxW24A" entityName="ExternalCallAction2" predecessor_AbstractAction="_P8PgcNq4EemisLuQNxW24A" successor_AbstractAction="_NsC_cdq4EemisLuQNxW24A" calledService_ExternalService="_bi4o4Nq3EemisLuQNxW24A" role_ExternalService="_HLKsYNq4EemisLuQNxW24A"/>
+    </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
   <components__Repository xsi:type="repository:BasicComponent" id="_F0OGkJjYEemTrvLgMAvOgQ" entityName="NotificationComponent">
     <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_MDJuAJjYEemTrvLgMAvOgQ" entityName="NotificationSystem.Provide" providedInterface__OperationProvidedRole="_svqc8JjXEemTrvLgMAvOgQ"/>
     <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_MDLjMJjYEemTrvLgMAvOgQ" describedService__SEFF="_u-MKAJjXEemTrvLgMAvOgQ">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_MDLjMZjYEemTrvLgMAvOgQ" successor_AbstractAction="_MDLjMpjYEemTrvLgMAvOgQ"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_MDLjMpjYEemTrvLgMAvOgQ" predecessor_AbstractAction="_MDLjMZjYEemTrvLgMAvOgQ"/>
-    </serviceEffectSpecifications__BasicComponent>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_MDoPIJjYEemTrvLgMAvOgQ">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_MDoPIZjYEemTrvLgMAvOgQ" successor_AbstractAction="_MDoPIpjYEemTrvLgMAvOgQ"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_MDoPIpjYEemTrvLgMAvOgQ" predecessor_AbstractAction="_MDoPIZjYEemTrvLgMAvOgQ"/>
+      <steps_Behaviour xsi:type="seff:StartAction" id="_MDLjMZjYEemTrvLgMAvOgQ" successor_AbstractAction="_V7V_UNq8EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_MDLjMpjYEemTrvLgMAvOgQ" predecessor_AbstractAction="_V7V_UNq8EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_V7V_UNq8EemisLuQNxW24A" entityName="sendNotifactions" predecessor_AbstractAction="_MDLjMZjYEemTrvLgMAvOgQ" successor_AbstractAction="_MDLjMpjYEemTrvLgMAvOgQ"/>
     </serviceEffectSpecifications__BasicComponent>
     <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_WKh80Nn2EemwqMQZe4SIMA" describedService__SEFF="_7I9z8Nn1EemwqMQZe4SIMA">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_XAfUcNn2EemwqMQZe4SIMA" successor_AbstractAction="_XAfUcdn2EemwqMQZe4SIMA"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_XAfUcdn2EemwqMQZe4SIMA" predecessor_AbstractAction="_XAfUcNn2EemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:StartAction" id="_XAfUcNn2EemwqMQZe4SIMA" successor_AbstractAction="_mxO-YNq8EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_XAfUcdn2EemwqMQZe4SIMA" predecessor_AbstractAction="_mxO-YNq8EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_mxO-YNq8EemisLuQNxW24A" entityName="sendNotifactionCancledWorker" predecessor_AbstractAction="_XAfUcNn2EemwqMQZe4SIMA" successor_AbstractAction="_XAfUcdn2EemwqMQZe4SIMA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_quO_cNq8EemisLuQNxW24A" describedService__SEFF="_BQ9ZQNSNEemd96bj0vKT5w">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_rYh5oNq8EemisLuQNxW24A" successor_AbstractAction="_svvkMNq8EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_rYh5odq8EemisLuQNxW24A" predecessor_AbstractAction="_svvkMNq8EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_svvkMNq8EemisLuQNxW24A" entityName="sendNotifcationLateWorker" predecessor_AbstractAction="_rYh5oNq8EemisLuQNxW24A" successor_AbstractAction="_rYh5odq8EemisLuQNxW24A"/>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_UotOkJjYEemTrvLgMAvOgQ" entityName="HRComponent">
+  <components__Repository xsi:type="repository:BasicComponent" id="_UotOkJjYEemTrvLgMAvOgQ" entityName="ProductionPlanning">
     <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_92faENoJEemwqMQZe4SIMA" entityName="ShiftManagement.Provide" providedInterface__OperationProvidedRole="_zP9okJjUEemTrvLgMAvOgQ"/>
     <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_IaYPkNoKEemwqMQZe4SIMA" entityName="WorkerManagement" providedInterface__OperationProvidedRole="_iIfB8NoJEemwqMQZe4SIMA"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_GdNaMNq4EemisLuQNxW24A" entityName="SupplierManagement.Provide" providedInterface__OperationProvidedRole="_a_lukNq3EemisLuQNxW24A"/>
     <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_JEm4UNoKEemwqMQZe4SIMA" entityName="HRComponent.PhysicalLocation.OperationRequiredRole1" requiredInterface__OperationRequiredRole="_5n3bQJjTEemTrvLgMAvOgQ"/>
     <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_QMXvwNoLEemwqMQZe4SIMA" entityName="NotificationSystem.Require" requiredInterface__OperationRequiredRole="_svqc8JjXEemTrvLgMAvOgQ"/>
     <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_SrdL4NoMEemwqMQZe4SIMA" entityName="PhysicalAccessRightManagement.Required" requiredInterface__OperationRequiredRole="_Bur4wJjREemX1MO8tejE0Q"/>
     <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_92goMNoJEemwqMQZe4SIMA" describedService__SEFF="_066HcJjUEemTrvLgMAvOgQ">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_92hPQNoJEemwqMQZe4SIMA" successor_AbstractAction="_92hPQdoJEemwqMQZe4SIMA"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_92hPQdoJEemwqMQZe4SIMA" predecessor_AbstractAction="_92hPQNoJEemwqMQZe4SIMA"/>
+      <steps_Behaviour xsi:type="seff:StartAction" id="_92hPQNoJEemwqMQZe4SIMA" successor_AbstractAction="_xhHogNq8EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_92hPQdoJEemwqMQZe4SIMA" predecessor_AbstractAction="_xhHogNq8EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_xhHogNq8EemisLuQNxW24A" entityName="createShift" predecessor_AbstractAction="_92hPQNoJEemwqMQZe4SIMA" successor_AbstractAction="_92hPQdoJEemwqMQZe4SIMA"/>
     </serviceEffectSpecifications__BasicComponent>
     <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_920xQNoJEemwqMQZe4SIMA" describedService__SEFF="_O-wD0JjVEemTrvLgMAvOgQ">
       <steps_Behaviour xsi:type="seff:StartAction" id="_921YUNoJEemwqMQZe4SIMA" successor_AbstractAction="_SJKPwNoPEemwqMQZe4SIMA"/>
@@ -112,6 +127,35 @@
       <steps_Behaviour xsi:type="seff:StopAction" id="_IaY2otoKEemwqMQZe4SIMA" predecessor_AbstractAction="_PEbFsNoKEemwqMQZe4SIMA"/>
       <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_NZRLcNoKEemwqMQZe4SIMA" entityName="ExternalCallAction1" predecessor_AbstractAction="_IaY2odoKEemwqMQZe4SIMA" successor_AbstractAction="_PEbFsNoKEemwqMQZe4SIMA" calledService_ExternalService="_9D75gJjTEemTrvLgMAvOgQ" role_ExternalService="_JEm4UNoKEemwqMQZe4SIMA"/>
       <steps_Behaviour xsi:type="seff:InternalAction" id="_PEbFsNoKEemwqMQZe4SIMA" entityName="CalculateDistance" predecessor_AbstractAction="_NZRLcNoKEemwqMQZe4SIMA" successor_AbstractAction="_IaY2otoKEemwqMQZe4SIMA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_GdOBQNq4EemisLuQNxW24A" describedService__SEFF="_bi4o4Nq3EemisLuQNxW24A">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_GdOoUNq4EemisLuQNxW24A" successor_AbstractAction="_5dQ_sNq8EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_GdOoUdq4EemisLuQNxW24A" predecessor_AbstractAction="_5dQ_sNq8EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_5dQ_sNq8EemisLuQNxW24A" entityName="sendDataSupplier" predecessor_AbstractAction="_GdOoUNq4EemisLuQNxW24A" successor_AbstractAction="_GdOoUdq4EemisLuQNxW24A"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_kp1AQNqsEemisLuQNxW24A" entityName="MachineSystem">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_-BgaMNqsEemisLuQNxW24A" entityName="ProductionData.Provide" providedInterface__OperationProvidedRole="_syTjQNqsEemisLuQNxW24A"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_-CFB8NqsEemisLuQNxW24A" describedService__SEFF="_vwUMgNqsEemisLuQNxW24A">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_-CFB8dqsEemisLuQNxW24A" successor_AbstractAction="_P7Wy0Nq8EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_-CFpANqsEemisLuQNxW24A" predecessor_AbstractAction="_P7Wy0Nq8EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_P7Wy0Nq8EemisLuQNxW24A" entityName="provideTemperature" predecessor_AbstractAction="_-CFB8dqsEemisLuQNxW24A" successor_AbstractAction="_-CFpANqsEemisLuQNxW24A"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_4pvEQNqsEemisLuQNxW24A" entityName="ProductionBI-System">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_NeKw8Nq3EemisLuQNxW24A" entityName="ProductionBI.Provide" providedInterface__OperationProvidedRole="__8QPoNqsEemisLuQNxW24A"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_gI2xoNq7EemisLuQNxW24A" entityName="ProductionBI-Internal.Provide" providedInterface__OperationProvidedRole="_ZHm8cNq7EemisLuQNxW24A"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_-tsx0NqsEemisLuQNxW24A" entityName="ProductionData.Require" requiredInterface__OperationRequiredRole="_syTjQNqsEemisLuQNxW24A"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_NeSFsNq3EemisLuQNxW24A" describedService__SEFF="_Z75MANquEemisLuQNxW24A">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_NeSFsdq3EemisLuQNxW24A" successor_AbstractAction="_J30jENq8EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_NeSFstq3EemisLuQNxW24A" predecessor_AbstractAction="_J30jENq8EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_J30jENq8EemisLuQNxW24A" entityName="calculateAlterationRate" predecessor_AbstractAction="_NeSFsdq3EemisLuQNxW24A" successor_AbstractAction="_NeSFstq3EemisLuQNxW24A"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_gJCX0Nq7EemisLuQNxW24A" describedService__SEFF="_c2ZiYNq7EemisLuQNxW24A">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_gJCX0dq7EemisLuQNxW24A" successor_AbstractAction="_iFSCENq7EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_gJCX0tq7EemisLuQNxW24A" predecessor_AbstractAction="_EivUwNq8EemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_iFSCENq7EemisLuQNxW24A" entityName="ExternalCallAction1" predecessor_AbstractAction="_gJCX0dq7EemisLuQNxW24A" successor_AbstractAction="_EivUwNq8EemisLuQNxW24A" calledService_ExternalService="_vwUMgNqsEemisLuQNxW24A" role_ExternalService="_-tsx0NqsEemisLuQNxW24A"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_EivUwNq8EemisLuQNxW24A" entityName="storeTemperature" predecessor_AbstractAction="_iFSCENq7EemisLuQNxW24A" successor_AbstractAction="_gJCX0tq7EemisLuQNxW24A"/>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
   <interfaces__Repository xsi:type="repository:OperationInterface" id="_Bur4wJjREemX1MO8tejE0Q" entityName="PhysicalAccessRightManagement">
@@ -198,6 +242,43 @@
     <signatures__OperationInterface id="_sdIIQNoOEemwqMQZe4SIMA" entityName="seeDistance">
       <parameters__OperationSignature dataType__Parameter="__fz0IJjVEemTrvLgMAvOgQ" parameterName="user"/>
     </signatures__OperationInterface>
+    <signatures__OperationInterface id="_Q0AEUNq3EemisLuQNxW24A" entityName="sendIncidentReport">
+      <parameters__OperationSignature parameterName="productItem">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_syTjQNqsEemisLuQNxW24A" entityName="ProductionData">
+    <signatures__OperationInterface id="_vwUMgNqsEemisLuQNxW24A" entityName="getTemperature">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="__8QPoNqsEemisLuQNxW24A" entityName="ProductionBI">
+    <signatures__OperationInterface id="_Z75MANquEemisLuQNxW24A" entityName="getAlterationRate">
+      <parameters__OperationSignature parameterName="startTime">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="endTime">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_a_lukNq3EemisLuQNxW24A" entityName="SupplierManagement">
+    <signatures__OperationInterface id="_bi4o4Nq3EemisLuQNxW24A" entityName="informSupplier">
+      <parameters__OperationSignature parameterName="temperature">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="timeSpan">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="productID">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_ZHm8cNq7EemisLuQNxW24A" entityName="ProductionBI-Internal">
+    <signatures__OperationInterface id="_c2ZiYNq7EemisLuQNxW24A" entityName="accumulateTemperature"/>
   </interfaces__Repository>
   <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_JDYuHJjUEemTrvLgMAvOgQ" entityName="Position">
     <innerDeclaration_CompositeDataType entityName="longitude">
