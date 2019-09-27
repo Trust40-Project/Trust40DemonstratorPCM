@@ -1,39 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataprocessing:DataSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:characteristics="http://www.palladiosimulator.org/pcm/dataprocessing/characteristics/0.1/" xmlns:data="http://www.palladiosimulator.org/pcm/dataprocessing/data/0.1/" xmlns:dataprocessing="http://www.palladiosimulator.org/pcm/dataprocessing/0.1/" xmlns:processing="http://www.palladiosimulator.org/pcm/dataprocessing/processing/0.1/" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2">
+<dataprocessing:DataSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:characteristics="http://www.palladiosimulator.org/pcm/dataprocessing/characteristics/0.1/" xmlns:data="http://www.palladiosimulator.org/pcm/dataprocessing/data/0.1/" xmlns:dataprocessing="http://www.palladiosimulator.org/pcm/dataprocessing/0.1/" xmlns:effectspecification="http://www.palladiosimulator.org/pcm/dataprocessing/effectspecification/0.1/" xmlns:processing="http://www.palladiosimulator.org/pcm/dataprocessing/processing/0.1/" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2">
   <dataProcessingContainers id="_rwaTQNtuEemTQaZ_xfdUvg" entityName="Machine">
-    <operations xsi:type="processing:CreateDataOperation" id="_uLJI8NtxEemJcJcoz4TD6A" entityName="Temperature">
-      <resultingData xsi:type="data:OriginalData" id="_yP5-4NtxEemJcJcoz4TD6A" entityName="Temperature">
+    <operations xsi:type="processing:CreateDataOperation" id="_FxK52OEqEemrn-8orcg28A">
+      <resultingData xsi:type="data:OriginalData" id="_IDStcOEqEemrn-8orcg28A" entityName="Temperature">
         <originalType xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
       </resultingData>
     </operations>
   </dataProcessingContainers>
   <dataProcessingContainers id="_By19wttxEemJcJcoz4TD6A" entityName="GettingTemperatureFromMachine">
-    <operations xsi:type="processing:LoadDataOperation" id="_CvnSkdtyEemJcJcoz4TD6A" entityName="getDataFromMachine">
-      <resultingData xsi:type="data:ResultBasedData" id="_DJLCEttyEemJcJcoz4TD6A" entityName="getDataFromMachine">
-        <operation href="demonstrator.repository#_vwUMgNqsEemisLuQNxW24A"/>
-      </resultingData>
-    </operations>
+    <operations xsi:type="processing:StoreDataOperation" id="_nllsBOEpEemb7pGek-oKEw" store="_rqHMENtwEemJcJcoz4TD6A"/>
   </dataProcessingContainers>
   <dataProcessingContainers id="_1OcaP99vEem7zNGDM4IZDw" entityName="StoringTemperature">
-    <operations xsi:type="processing:StoreDataOperation" id="_NSA6VNtyEemJcJcoz4TD6A" entityName="StoreData" consumedData="_DJLCEttyEemJcJcoz4TD6A" store="_rqHMENtwEemJcJcoz4TD6A"/>
+    <operations xsi:type="processing:StoreDataOperation" id="_NSA6VNtyEemJcJcoz4TD6A" entityName="StoreData" store="_rqHMENtwEemJcJcoz4TD6A"/>
   </dataProcessingContainers>
   <dataProcessingContainers id="_Fj-9D9uFEemfj-KZoKGLtg" entityName="calculateAlteratingTemperature">
-    <operations xsi:type="processing:LoadAllDataOperation" id="_QQYOQtuFEemfj-KZoKGLtg" entityName="getTemperature" store="_rqHMENtwEemJcJcoz4TD6A">
+    <operations xsi:type="processing:LoadDataOperation" id="_vmp04eEoEemOmaZsJ3rorw">
       <resultingData xsi:type="data:OriginalData" id="_KczT0NuKEemfj-KZoKGLtg" entityName="ListTemperature">
-        <originalType xsi:type="repository:CollectionDataType" href="demonstrator.repository#_gLMvaduJEemfj-KZoKGLtg"/>
+        <originalType xsi:type="repository:CollectionDataType" href="demonstrator.repository#_8ANykOEoEemOmaZsJ3rorw"/>
       </resultingData>
     </operations>
-    <operations xsi:type="processing:UnionDataOperation" id="_1r0iyduKEemfj-KZoKGLtg" consumedData="_KczT0NuKEemfj-KZoKGLtg">
-      <resultingData xsi:type="data:OriginalData" id="_RNeg8NuLEemfj-KZoKGLtg" entityName="AlteratingTemperature">
-        <originalType xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
-      </resultingData>
+    <operations xsi:type="processing:EffectSpecifyingTransformDataOperation" id="_hPD5veEnEemaAMG3u2pd_w" entityName="AlteratingTemperatureTransform" processingEffectOperationType="__gyBMOEmEemaAMG3u2pd_w">
+      <output xsi:type="data:DerivedData" id="_unmBE-EnEemaAMG3u2pd_w" entityName="alternatingTemperature" sources="_KczT0NuKEemfj-KZoKGLtg">
+        <resultingDataType xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </output>
     </operations>
-    <operations xsi:type="processing:CharacteristicChangingDataOperation" id="_9rFYDNuNEemfj-KZoKGLtg" operation="REPLACE">
-      <characteristic xsi:type="characteristics:EnumCharacteristic" id="_Av-sYNuOEemfj-KZoKGLtg" characteristicType="__v5OkNtwEemJcJcoz4TD6A"/>
-    </operations>
-    <operations xsi:type="processing:ReturnDataOperation" id="_xzaGxduKEemfj-KZoKGLtg"/>
   </dataProcessingContainers>
-  <dataProcessingContainers id="_2USJn9uNEemfj-KZoKGLtg" entityName="inform"/>
   <dataProcessingContainers id="_Nlvy4N-JEem7zNGDM4IZDw" entityName="CreateShiftAssignment">
     <operations xsi:type="processing:CreateDataOperation" id="_QXmPcN-JEem7zNGDM4IZDw" entityName="ShiftAssignment">
       <resultingData xsi:type="data:OriginalData" id="_k6TegN-JEem7zNGDM4IZDw" entityName="ShiftAssignment">
@@ -46,53 +37,149 @@
     <operations xsi:type="processing:LoadDataOperation" id="_7ohGYd-KEem7zNGDM4IZDw" entityName="ShiftAssignment" store="_36KawN-JEem7zNGDM4IZDw">
       <resultingData xsi:type="data:CopiedData" id="_FPF_Fd-LEem7zNGDM4IZDw" entityName="ShiftAssignment" source="_k6TegN-JEem7zNGDM4IZDw"/>
     </operations>
+    <operations xsi:type="processing:SelectionDataOperation" id="_ttWSS-EaEemrH6nNz2hqOw" entityName="selectLateWorker">
+      <output xsi:type="data:DerivedData" id="_0e--IOEaEemrH6nNz2hqOw" entityName="lateWorkers" sources="_FPF_Fd-LEem7zNGDM4IZDw">
+        <resultingDataType xsi:type="repository:CollectionDataType" href="demonstrator.repository#_sdlD4JjWEemTrvLgMAvOgQ"/>
+      </output>
+    </operations>
   </dataProcessingContainers>
   <dataProcessingContainers id="_LlmYv9-MEem7zNGDM4IZDw" entityName="getPosition">
     <operations xsi:type="processing:LoadDataOperation" id="_kzOewd-MEem7zNGDM4IZDw" store="_36KawN-JEem7zNGDM4IZDw">
-      <resultingData xsi:type="data:ResultBasedData" id="_8qToot-MEem7zNGDM4IZDw">
+      <resultingData xsi:type="data:ResultBasedData" id="_8qToot-MEem7zNGDM4IZDw" entityName="PositionData">
         <operation href="demonstrator.repository#_9D75gJjTEemTrvLgMAvOgQ"/>
       </resultingData>
     </operations>
-    <operations xsi:type="processing:LoadDataOperation" id="_--QBOd-MEem7zNGDM4IZDw">
-      <resultingData xsi:type="data:CopiedData" id="_ATG7Vt-NEem7zNGDM4IZDw" source="_FPF_Fd-LEem7zNGDM4IZDw"/>
-    </operations>
-    <operations xsi:type="processing:CharacteristicChangingDataOperation" id="_pOuZvN-MEem7zNGDM4IZDw">
-      <characteristic xsi:type="characteristics:EnumCharacteristic" id="_tZqJEN-MEem7zNGDM4IZDw" characteristicType="__v5OkNtwEemJcJcoz4TD6A" literals="_wKYWoNuOEemfj-KZoKGLtg"/>
+    <operations xsi:type="processing:EffectSpecifyingTransformDataOperation" id="_EngEbeEcEemrH6nNz2hqOw" entityName="CalculateDistance" processingEffectOperationType="_aBTPIOD-EemrH6nNz2hqOw">
+      <output xsi:type="data:DerivedData" id="_InCcE-EcEemrH6nNz2hqOw" entityName="positionLateWorker" sources="__KLbsOD9EemrH6nNz2hqOw _8qToot-MEem7zNGDM4IZDw">
+        <resultingDataType xsi:type="repository:CompositeDataType" href="demonstrator.repository#_JDYuHJjUEemTrvLgMAvOgQ"/>
+      </output>
     </operations>
   </dataProcessingContainers>
   <dataProcessingContainers id="_GHbqb9-NEem7zNGDM4IZDw" entityName="notifyLateWorkers">
-    <operations xsi:type="processing:LoadDataOperation" id="_PXpRgd-NEem7zNGDM4IZDw">
-      <resultingData xsi:type="data:ParameterBasedData" id="_SiFNMd-NEem7zNGDM4IZDw" entityName="lateWorker">
-        <parameter href="demonstrator.repository#/0/@interfaces__Repository.4/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
-      </resultingData>
-    </operations>
+    <operations xsi:type="processing:UserReadData" id="_2rK29uEcEemrH6nNz2hqOw" entityName="sendNotifications" consumedData="_0e--IOEaEemrH6nNz2hqOw"/>
   </dataProcessingContainers>
   <dataProcessingContainers id="_qIuub9-NEem7zNGDM4IZDw" entityName="notifyNewWorkers">
-    <operations xsi:type="processing:LoadDataOperation" id="_ZtbkId-OEem7zNGDM4IZDw" store="_36KawN-JEem7zNGDM4IZDw">
-      <resultingData xsi:type="data:ParameterBasedData" id="_a_clod-OEem7zNGDM4IZDw" entityName="newWorkers">
-        <parameter href="demonstrator.repository#/0/@interfaces__Repository.4/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    <operations xsi:type="processing:UserReadData" id="_TyjK5uEfEemrH6nNz2hqOw" entityName="sendNotifications" consumedData="_eHSxIOEfEemrH6nNz2hqOw"/>
+  </dataProcessingContainers>
+  <dataProcessingContainers id="_aIy1D9-PEem7zNGDM4IZDw" entityName="setAccessGate">
+    <operations xsi:type="processing:PerformDataTransmissionOperation" id="_jJ69g-EfEemrH6nNz2hqOw" entityName="ProductionPlanning->AccessSystem"/>
+  </dataProcessingContainers>
+  <dataProcessingContainers id="_Ebedz-EgEemrH6nNz2hqOw" entityName="setAccessGateComponent">
+    <operations xsi:type="processing:CreateDataOperation" id="_tIDvsOEhEemaAMG3u2pd_w">
+      <resultingData xsi:type="data:ParameterBasedData" id="_v1aGweEhEemaAMG3u2pd_w" entityName="listCancledWorkers">
+        <parameter href="demonstrator.repository#/0/@interfaces__Repository.0/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+      </resultingData>
+    </operations>
+    <operations xsi:type="processing:CreateDataOperation" id="_z3nX-OEhEemaAMG3u2pd_w">
+      <resultingData xsi:type="data:ParameterBasedData" id="_0qC6ceEhEemaAMG3u2pd_w">
+        <parameter href="demonstrator.repository#/0/@interfaces__Repository.0/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+      </resultingData>
+    </operations>
+    <operations xsi:type="processing:StoreDataOperation" id="_eakAhOEhEemaAMG3u2pd_w" store="_C5vv0OEhEemaAMG3u2pd_w"/>
+    <operations xsi:type="processing:StoreDataOperation" id="_A41ylOEiEemaAMG3u2pd_w" store="_ON7Z0OEhEemaAMG3u2pd_w"/>
+  </dataProcessingContainers>
+  <dataProcessingContainers id="_dQMq39-PEem7zNGDM4IZDw" entityName="setAccessDispenser">
+    <operations xsi:type="processing:PerformDataTransmissionOperation" id="_Xtkuo-EiEemaAMG3u2pd_w"/>
+  </dataProcessingContainers>
+  <dataProcessingContainers id="_INYXP-EiEemaAMG3u2pd_w" entityName="setAccessDispenserComponent">
+    <operations xsi:type="processing:CreateDataOperation" id="_YRWxIOEiEemaAMG3u2pd_w">
+      <resultingData xsi:type="data:ParameterBasedData" id="_eF_CMeEiEemaAMG3u2pd_w">
+        <parameter href="demonstrator.repository#/0/@interfaces__Repository.0/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+      </resultingData>
+    </operations>
+    <operations xsi:type="processing:CreateDataOperation" id="_0lsJeOEiEemaAMG3u2pd_w">
+      <resultingData xsi:type="data:ParameterBasedData" id="_1JgBIeEiEemaAMG3u2pd_w">
+        <parameter href="demonstrator.repository#/0/@interfaces__Repository.0/@signatures__OperationInterface.1/@parameters__OperationSignature.1"/>
+      </resultingData>
+    </operations>
+    <operations xsi:type="processing:StoreDataOperation" id="_3qU_LOEiEemaAMG3u2pd_w" entityName="storeUsers" store="_C5vv0OEhEemaAMG3u2pd_w"/>
+    <operations xsi:type="processing:StoreDataOperation" id="_5ROEdOEiEemaAMG3u2pd_w" entityName="storeBool" store="_ON7Z0OEhEemaAMG3u2pd_w"/>
+  </dataProcessingContainers>
+  <dataProcessingContainers id="_liROv9-PEem7zNGDM4IZDw" entityName="setAccessDoor">
+    <operations xsi:type="processing:PerformDataTransmissionOperation" id="_gVUyI-EjEemaAMG3u2pd_w"/>
+  </dataProcessingContainers>
+  <dataProcessingContainers id="_CKwQ_-EjEemaAMG3u2pd_w" entityName="setAccessDoorComponent">
+    <operations xsi:type="processing:CreateDataOperation" id="_GJW0gOEjEemaAMG3u2pd_w">
+      <resultingData xsi:type="data:ParameterBasedData" id="_HYcd0eEjEemaAMG3u2pd_w" entityName="userDoor">
+        <parameter href="demonstrator.repository#/0/@interfaces__Repository.0/@signatures__OperationInterface.2/@parameters__OperationSignature.0"/>
+      </resultingData>
+    </operations>
+    <operations xsi:type="processing:CreateDataOperation" id="_JkYJ4OEjEemaAMG3u2pd_w">
+      <resultingData xsi:type="data:ParameterBasedData" id="_Kl_X4eEjEemaAMG3u2pd_w" entityName="boolDoor">
+        <parameter href="demonstrator.repository#/0/@interfaces__Repository.0/@signatures__OperationInterface.2/@parameters__OperationSignature.1"/>
+      </resultingData>
+    </operations>
+    <operations xsi:type="processing:StoreDataOperation" id="_RokCxOEjEemaAMG3u2pd_w" entityName="storeBool" store="_ON7Z0OEhEemaAMG3u2pd_w"/>
+    <operations xsi:type="processing:StoreDataOperation" id="_b3xBtOEjEemaAMG3u2pd_w" entityName="storeUsers" store="_C5vv0OEhEemaAMG3u2pd_w"/>
+  </dataProcessingContainers>
+  <dataProcessingContainers id="_aPt6g9-lEem7zNGDM4IZDw" entityName="getPhoneNumber">
+    <operations xsi:type="processing:LoadDataOperation" id="_sVsA8eEIEemrH6nNz2hqOw">
+      <resultingData xsi:type="data:ParameterBasedData" id="_tGUzseEIEemrH6nNz2hqOw" entityName="userForPhoneNumber">
+        <parameter href="demonstrator.repository#/0/@interfaces__Repository.1/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+      </resultingData>
+    </operations>
+    <operations xsi:type="processing:LoadDataOperation" id="_2Mw-UeEJEemrH6nNz2hqOw">
+      <resultingData xsi:type="data:OriginalData" id="_3MFGQOEJEemrH6nNz2hqOw" entityName="ListOfAllUsersPhone">
+        <originalType xsi:type="repository:CollectionDataType" href="demonstrator.repository#_sdlD4JjWEemTrvLgMAvOgQ"/>
+      </resultingData>
+      <initialCharacteristics xsi:type="characteristics:EnumCharacteristic" id="_7RW5l-EJEemrH6nNz2hqOw" characteristicType="__v5OkNtwEemJcJcoz4TD6A" literals="_WqaswNt1EemJcJcoz4TD6A"/>
+    </operations>
+    <operations xsi:type="processing:SelectionDataOperation" id="_EN7MAuEKEemrH6nNz2hqOw">
+      <output xsi:type="data:DerivedData" id="_FwX2I-EKEemrH6nNz2hqOw" sources="_3MFGQOEJEemrH6nNz2hqOw">
+        <resultingDataType xsi:type="repository:CompositeDataType" href="demonstrator.repository#__fz0IJjVEemTrvLgMAvOgQ"/>
+      </output>
+    </operations>
+    <operations xsi:type="processing:ProjectionDataOperation" id="_57RF4eEIEemrH6nNz2hqOw">
+      <output xsi:type="data:DerivedData" id="_I_7X0-EJEemrH6nNz2hqOw" entityName="Phonenumber" sources="_tGUzseEIEemrH6nNz2hqOw">
+        <resultingDataType xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.4"/>
+      </output>
+    </operations>
+  </dataProcessingContainers>
+  <dataProcessingContainers id="_gIr479-lEem7zNGDM4IZDw" entityName="seePhoneNumber">
+    <operations xsi:type="processing:UserReadData" id="_YbHv9uEIEemrH6nNz2hqOw"/>
+  </dataProcessingContainers>
+  <dataProcessingContainers id="_vRiuYN-lEem7zNGDM4IZDw" entityName="checkProduct">
+    <operations xsi:type="processing:CreateDataOperation" id="_S9lDAOElEemaAMG3u2pd_w">
+      <resultingData xsi:type="data:OriginalData" id="_T-TgMOElEemaAMG3u2pd_w" entityName="defectProduct">
+        <originalType xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
       </resultingData>
     </operations>
   </dataProcessingContainers>
-  <dataProcessingContainers id="_tEhxL9-NEem7zNGDM4IZDw" entityName="notifyCancledWorker">
-    <operations xsi:type="processing:LoadDataOperation" id="_gkFS4d-OEem7zNGDM4IZDw">
-      <resultingData xsi:type="data:ParameterBasedData" id="_kVFfUd-OEem7zNGDM4IZDw" entityName="cancledData">
-        <parameter href="demonstrator.repository#/0/@interfaces__Repository.4/@signatures__OperationInterface.2/@parameters__OperationSignature.0"/>
+  <dataProcessingContainers id="_An0dsN-mEem7zNGDM4IZDw" entityName="sendReport">
+    <operations xsi:type="processing:UserReadData" id="_s6QnduElEemaAMG3u2pd_w" entityName="SendTemperature" consumedData="_unmBE-EnEemaAMG3u2pd_w"/>
+    <operations xsi:type="processing:UserReadData" id="_1B4O1uElEemaAMG3u2pd_w" consumedData="_T-TgMOElEemaAMG3u2pd_w"/>
+  </dataProcessingContainers>
+  <dataProcessingContainers id="_Inu6kN-mEem7zNGDM4IZDw" entityName="getDistance">
+    <operations xsi:type="processing:LoadDataOperation" id="_xK5vUeD7EemrH6nNz2hqOw">
+      <resultingData xsi:type="data:ResultBasedData" id="_8pZL4uD7EemrH6nNz2hqOw" entityName="positionData">
+        <operation href="demonstrator.repository#_9D75gJjTEemTrvLgMAvOgQ"/>
       </resultingData>
     </operations>
   </dataProcessingContainers>
-  <dataProcessingContainers id="_VK5-sN-PEem7zNGDM4IZDw" entityName="getLateWorkers"/>
-  <dataProcessingContainers id="_aIy1D9-PEem7zNGDM4IZDw" entityName="setAccessGate"/>
-  <dataProcessingContainers id="_dQMq39-PEem7zNGDM4IZDw" entityName="setAccessDispenser"/>
-  <dataProcessingContainers id="_liROv9-PEem7zNGDM4IZDw" entityName="setAccessDoor"/>
-  <dataProcessingContainers id="_aPt6g9-lEem7zNGDM4IZDw" entityName="getPhoneNumber"/>
-  <dataProcessingContainers id="_gIr479-lEem7zNGDM4IZDw" entityName="seePhoneNumber"/>
-  <dataProcessingContainers id="_vRiuYN-lEem7zNGDM4IZDw" entityName="checkProduct"/>
-  <dataProcessingContainers id="_An0dsN-mEem7zNGDM4IZDw" entityName="sendReport"/>
-  <dataProcessingContainers id="_Inu6kN-mEem7zNGDM4IZDw" entityName="getDistance"/>
-  <dataProcessingContainers id="_KSGxv9-mEem7zNGDM4IZDw" entityName="seeDistance"/>
+  <dataProcessingContainers id="_KSGxv9-mEem7zNGDM4IZDw" entityName="calculateDistance">
+    <operations xsi:type="processing:CreateDataOperation" id="_1b6moOD9EemrH6nNz2hqOw" entityName="CreatingCompanyPosition">
+      <resultingData xsi:type="data:OriginalData" id="__KLbsOD9EemrH6nNz2hqOw" entityName="positionCompany">
+        <originalType xsi:type="repository:CompositeDataType" href="demonstrator.repository#_JDYuHJjUEemTrvLgMAvOgQ"/>
+      </resultingData>
+    </operations>
+    <operations xsi:type="processing:EffectSpecifyingTransformDataOperation" id="_DZn3reD-EemrH6nNz2hqOw" entityName="calculateDistance" processingEffectOperationType="_aBTPIOD-EemrH6nNz2hqOw">
+      <output xsi:type="data:DerivedData" id="_eE34o-EGEemrH6nNz2hqOw" entityName="distance" sources="__KLbsOD9EemrH6nNz2hqOw _8pZL4uD7EemrH6nNz2hqOw">
+        <resultingDataType xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </output>
+    </operations>
+  </dataProcessingContainers>
+  <dataProcessingContainers id="_4vwA3-D7EemrH6nNz2hqOw" entityName="seeDistance">
+    <operations xsi:type="processing:UserReadData" id="_ibwHZuEIEemrH6nNz2hqOw" entityName="readDistance" consumedData="_eE34o-EGEemrH6nNz2hqOw"/>
+  </dataProcessingContainers>
+  <dataProcessingContainers id="_GUsUEOEeEemrH6nNz2hqOw" entityName="getReplacementWorker">
+    <operations xsi:type="processing:CreateDataOperation" id="_dxaAsOEfEemrH6nNz2hqOw">
+      <resultingData xsi:type="data:OriginalData" id="_eHSxIOEfEemrH6nNz2hqOw" entityName="replacementWorker">
+        <originalType xsi:type="repository:CollectionDataType" href="demonstrator.repository#_sdlD4JjWEemTrvLgMAvOgQ"/>
+      </resultingData>
+    </operations>
+  </dataProcessingContainers>
   <characteristicTypeContainers id="_-p-vYdtwEemJcJcoz4TD6A">
-    <characteristicTypes xsi:type="characteristics:EnumCharacteristicType" id="__v5OkNtwEemJcJcoz4TD6A" enum="_VIe_8dt1EemJcJcoz4TD6A"/>
+    <characteristicTypes xsi:type="characteristics:EnumCharacteristicType" id="__v5OkNtwEemJcJcoz4TD6A" entityName="PrivacyLevelType" enum="_VIe_8dt1EemJcJcoz4TD6A"/>
     <enumerations id="_VIe_8dt1EemJcJcoz4TD6A" entityName="PrivacyLevel">
       <literals id="_WqaswNt1EemJcJcoz4TD6A" entityName="Highly Sensitive"/>
       <literals id="_s_ZBUNuOEemfj-KZoKGLtg" entityName="Sensitive"/>
@@ -111,12 +198,45 @@
       <dataType xsi:type="repository:CollectionDataType" href="demonstrator.repository#_sdlD4JjWEemTrvLgMAvOgQ"/>
     </stores>
   </storeContainers>
+  <storeContainers id="_a-P5Y-EbEemrH6nNz2hqOw" entityName="PositionStore">
+    <stores id="_dWFTcOEbEemrH6nNz2hqOw" entityName="Position">
+      <dataType xsi:type="repository:CompositeDataType" href="demonstrator.repository#_JDYuHJjUEemTrvLgMAvOgQ"/>
+    </stores>
+  </storeContainers>
   <storeContainers id="_0oi5At-JEem7zNGDM4IZDw" entityName="ShiftAssignmentContainer">
     <stores id="_36KawN-JEem7zNGDM4IZDw" entityName="ShiftAssignment">
       <dataType xsi:type="repository:CollectionDataType" href="demonstrator.repository#_sdlD4JjWEemTrvLgMAvOgQ"/>
     </stores>
   </storeContainers>
+  <storeContainers id="_AdzR0-EhEemaAMG3u2pd_w" entityName="StoreAccess">
+    <stores id="_C5vv0OEhEemaAMG3u2pd_w" entityName="username">
+      <dataType xsi:type="repository:CollectionDataType" href="demonstrator.repository#_sdlD4JjWEemTrvLgMAvOgQ"/>
+    </stores>
+    <stores id="_ON7Z0OEhEemaAMG3u2pd_w" entityName="access">
+      <dataType xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </stores>
+  </storeContainers>
   <characteristicContainer xsi:type="characteristics:StoreCharacteristics" id="_aaS0s9txEemJcJcoz4TD6A" store="_rqHMENtwEemJcJcoz4TD6A">
     <ownedCharacteristics xsi:type="characteristics:EnumCharacteristic" id="_b-5a8NtxEemJcJcoz4TD6A" characteristicType="__v5OkNtwEemJcJcoz4TD6A" literals="_WqaswNt1EemJcJcoz4TD6A"/>
   </characteristicContainer>
+  <extensions xsi:type="effectspecification:ProcessingEffectSpecification" id="_IniuCOD-EemrH6nNz2hqOw">
+    <operationTypes id="_aBTPIOD-EemrH6nNz2hqOw" entityName="calculateDistance"/>
+    <operationTypes id="__gyBMOEmEemaAMG3u2pd_w" entityName="calculateAlteratingTemperature"/>
+    <processingEffects xsi:type="effectspecification:OperationTypeDataProcessingEffect" id="_DQ0kUeEnEemaAMG3u2pd_w">
+      <characteristicChanges id="_FW3DwOEnEemaAMG3u2pd_w" changeOperation="REPLACE">
+        <characteristicSpecifications xsi:type="effectspecification:DirectCharacteristic" id="_HRSwIOEnEemaAMG3u2pd_w" entityName="PrivacyLevel">
+          <characteristic xsi:type="characteristics:EnumCharacteristic" id="_J_TOgOEnEemaAMG3u2pd_w" characteristicType="__v5OkNtwEemJcJcoz4TD6A" literals="_wKYWoNuOEemfj-KZoKGLtg"/>
+        </characteristicSpecifications>
+      </characteristicChanges>
+    </processingEffects>
+    <processingEffects xsi:type="effectspecification:OperationTypeDataProcessingEffect" id="_MY6t4eD-EemrH6nNz2hqOw" entityName="calculateDistance" relevantOperationTypes="_aBTPIOD-EemrH6nNz2hqOw">
+      <fromDataType xsi:type="repository:CompositeDataType" href="demonstrator.repository#_JDYuHJjUEemTrvLgMAvOgQ"/>
+      <toDataType xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      <characteristicChanges id="_hrwZYOD-EemrH6nNz2hqOw" entityName="changePrivacyLevel" changeOperation="REPLACE">
+        <characteristicSpecifications xsi:type="effectspecification:DirectCharacteristic" id="_lrXv8OEGEemrH6nNz2hqOw" entityName="PrivacyLevel">
+          <characteristic xsi:type="characteristics:EnumCharacteristic" id="_nVB1YOEGEemrH6nNz2hqOw" characteristicType="__v5OkNtwEemJcJcoz4TD6A" literals="_wKYWoNuOEemfj-KZoKGLtg"/>
+        </characteristicSpecifications>
+      </characteristicChanges>
+    </processingEffects>
+  </extensions>
 </dataprocessing:DataSpecification>
